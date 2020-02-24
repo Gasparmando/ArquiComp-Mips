@@ -1,0 +1,47 @@
+
+
+
+// Instantiate the module
+DataMemory instance_name (
+    .CLK(CLK), 
+    .RESET(RESET), 
+    .MEMREAD(MEMREAD), 
+    .MEMWRITE(MEMWRITE), 
+    .ADDR(ADDR), 
+    .WRITE_DATA(WRITE_DATA), 
+    .READ_DATA(READ_DATA), 
+    .O_REG_0(O_REG_0), 
+    .O_REG_1(O_REG_1), 
+    .O_REG_2(O_REG_2), 
+    .O_REG_3(O_REG_3), 
+    .O_REG_4(O_REG_4), 
+    .O_REG_5(O_REG_5), 
+    .O_REG_6(O_REG_6), 
+    .O_REG_7(O_REG_7), 
+    .O_REG_8(O_REG_8), 
+    .O_REG_9(O_REG_9), 
+    .O_REG_10(O_REG_10), 
+    .O_REG_11(O_REG_11), 
+    .O_REG_12(O_REG_12), 
+    .O_REG_13(O_REG_13), 
+    .O_REG_14(O_REG_14), 
+    .O_REG_15(O_REG_15), 
+    .O_REG_16(O_REG_16), 
+    .O_REG_17(O_REG_17), 
+    .O_REG_18(O_REG_18), 
+    .O_REG_19(O_REG_19), 
+    .O_REG_20(O_REG_20), 
+    .O_REG_21(O_REG_21), 
+    .O_REG_22(O_REG_22), 
+    .O_REG_23(O_REG_23), 
+    .O_REG_24(O_REG_24), 
+    .O_REG_25(O_REG_25), 
+    .O_REG_26(O_REG_26), 
+    .O_REG_27(O_REG_27), 
+    .O_REG_28(O_REG_28), 
+    .O_REG_29(O_REG_29), 
+    .O_REG_30(O_REG_30), 
+    .O_REG_31(O_REG_31)
+    );
+
+

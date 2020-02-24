@@ -1,0 +1,17 @@
+
+
+
+// Instantiate the module
+HazardDetectionUnit instance_name (
+    .CLK(CLK), 
+    .RESET(RESET), 
+    .I_HZ_ID_RS(I_HZ_ID_RS), 
+    .I_HZ_ID_RT(I_HZ_ID_RT), 
+    .I_HZ_EXE_RT(I_HZ_EXE_RT), 
+    .I_HZ_EXE_MemRead(I_HZ_EXE_MemRead), 
+    .O_HZ_IFID_WRITE(O_HZ_IFID_WRITE), 
+    .O_HZ_PC_WRITE(O_HZ_PC_WRITE), 
+    .O_HZ_ID_ControlMux(O_HZ_ID_ControlMux)
+    );
+
+

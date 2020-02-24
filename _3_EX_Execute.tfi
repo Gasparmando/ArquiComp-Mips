@@ -1,0 +1,10 @@
+
+
+
+// Instantiate the module
+_3_EX_Execute instance_name (
+    .CLK(CLK), 
+    .RESET(RESET)
+    );
+
+

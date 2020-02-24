@@ -1,0 +1,10 @@
+
+
+
+// Instantiate the module
+Shift16 instance_name (
+    .IN(IN), 
+    .OUT(OUT)
+    );
+
+

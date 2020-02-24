@@ -1,0 +1,36 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : sch_drc.vf
+// /___/   /\     Timestamp : 02/10/2020 18:53:34
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\sch2hdl.exe -intstyle ise -family artix7 -verilog sch_drc.vf -w C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4/sch.sch
+//Design Name: sch
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module sch();
+
+   
+   wire [31:0] XLXN_3;
+   
+   ProgramMemory  XLXI_1 (.ADDR(XLXN_3[31:0]), 
+                         .CLK(), 
+                         .RESET(), 
+                         .DATA());
+   PC  XLXI_2 (.CLK(), 
+              .PC_IN(), 
+              .RESET(), 
+              .PC_OUT(XLXN_3[31:0]));
+endmodule

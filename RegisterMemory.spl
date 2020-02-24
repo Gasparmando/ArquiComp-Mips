@@ -1,0 +1,15 @@
+[Inputs]
+CLK
+RESET
+I_REGMEM_REGWR
+=I_REGMEM_RS[4:0]=
+=I_REGMEM_RT[4:0]=
+=I_REGMEM_RD[4:0]=
+=I_REGMEM_WRITE_DATA[31:0]=
+[Outputs]
+=A[31:0]=
+=B[31:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel RegisterMemory
+

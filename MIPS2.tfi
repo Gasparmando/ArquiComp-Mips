@@ -1,0 +1,10 @@
+
+
+
+// Instantiate the module
+MIPS2 instance_name (
+    .CLK(CLK), 
+    .RESET(RESET)
+    );
+
+

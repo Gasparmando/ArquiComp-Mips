@@ -1,0 +1,3 @@
+vhdtdtfi -lib work D:/workspace/ArquitecturaDeComputadoras/TP4/PC.v -lang verilog -prj TP4 -o PC.spl -module PC -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 PC.spl D:/workspace/ArquitecturaDeComputadoras/TP4/PC.sym 
+vhdtdtfi -lang verilog -prj TP4 -o C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4/PC.tfi -lib work C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4//PC.v -module PC -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

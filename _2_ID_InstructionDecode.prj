@@ -1,0 +1,5 @@
+verilog work "signExtension.v"
+verilog work "RegisterMemory.v"
+verilog work "ID_EX.v"
+verilog work "ControlUnit.v"
+verilog work "ID_InstructionDecode.v"

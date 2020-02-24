@@ -1,0 +1,3 @@
+vhdtdtfi -lang verilog -prj TP4 -o C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4/Mux.tfi -lib work C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4//Mux.v -module Mux -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lib work C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4/Mux.v -lang verilog -prj TP4 -o Mux.spl -module Mux -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 Mux.spl C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4/Mux.sym 

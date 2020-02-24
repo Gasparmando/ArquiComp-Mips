@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"\\vboxsrv\win7vm\workspace\ArquitecturaDeComputadoras\TP4\ProgramMemory.v" Line 74: Result of <arg fmt="%d" index="1">5</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">4</arg>-bit target.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="569" delta="new" >"\\vboxsrv\win7vm\workspace\ArquitecturaDeComputadoras\TP4\ProgramMemory.v" Line 74: Loop count limit exceeded. Condition is never false.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1499" delta="new" >"\\vboxsrv\win7vm\workspace\ArquitecturaDeComputadoras\TP4\ProgramMemory.v" Line 21: Empty module &lt;<arg fmt="%s" index="1">ProgramMemory</arg>&gt; remains a black box.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"\\vboxsrv\win7vm\workspace\ArquitecturaDeComputadoras\TP4\RegisterMemory.v" Line 89: Signal &lt;<arg fmt="%s" index="1">REG</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"\\vboxsrv\win7vm\workspace\ArquitecturaDeComputadoras\TP4\RegisterMemory.v" Line 90: Signal &lt;<arg fmt="%s" index="1">REG</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="1401" delta="new" >"\\vboxsrv\win7vm\workspace\ArquitecturaDeComputadoras\TP4\RegisterMemory.v" Line 69: Signal <arg fmt="%s" index="1">O_REGMEM_READ_DATA_1[31]</arg> in unit <arg fmt="%s" index="2">RegisterMemory</arg> is connected to following multiple drivers:
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1499" delta="new" >"\\vboxsrv\win7vm\workspace\ArquitecturaDeComputadoras\TP4\RegisterMemory.v" Line 21: Empty module &lt;<arg fmt="%s" index="1">RegisterMemory</arg>&gt; remains a black box.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"\\vboxsrv\win7vm\workspace\ArquitecturaDeComputadoras\TP4\MIPS2.v" Line 187: Net &lt;<arg fmt="%s" index="1">w_exe_pc_out[31]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="552" delta="new" >"\\vboxsrv\win7vm\workspace\ArquitecturaDeComputadoras\TP4\MIPS2.v" Line 442: Input port <arg fmt="%s" index="1">D[31]</arg> is not connected on this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="552" delta="new" >"\\vboxsrv\win7vm\workspace\ArquitecturaDeComputadoras\TP4\MIPS2.v" Line 462: Input port <arg fmt="%s" index="1">D[31]</arg> is not connected on this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="552" delta="new" >"\\vboxsrv\win7vm\workspace\ArquitecturaDeComputadoras\TP4\MIPS2.v" Line 482: Input port <arg fmt="%s" index="1">D[4]</arg> is not connected on this instance
+</msg>
+
+</messages>
+

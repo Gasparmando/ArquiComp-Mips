@@ -1,0 +1,6 @@
+verilog work "sumador.v"
+verilog work "Mux.v"
+verilog work "EX_MEM.v"
+verilog work "ALUController.v"
+verilog work "ALU.v"
+verilog work "EX_Execute.v"

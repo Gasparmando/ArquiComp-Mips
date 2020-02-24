@@ -1,0 +1,11 @@
+
+
+
+// Instantiate the module
+SUMADOR instance_name (
+    .A(A), 
+    .B(B), 
+    .Z(Z)
+    );
+
+

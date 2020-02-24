@@ -1,0 +1,11 @@
+
+
+
+// Instantiate the module
+comparator instance_name (
+    .I_COM_A(I_COM_A), 
+    .I_COM_B(I_COM_B), 
+    .O_COM_IGUAL(O_COM_IGUAL)
+    );
+
+

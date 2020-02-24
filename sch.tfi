@@ -1,0 +1,9 @@
+// Verilog instantiation template created from schematic C:\Users\gaspa\Documents\win7VM\workspace\ArquitecturaDeComputadoras\TP4\sch.sch - Mon Feb 10 18:53:55 2020
+//
+// Notes: 
+// To use this template to instantiate this component,cut-and-paste and then edit
+//
+// Instantiate the UUT
+   sch UUT (
+		
+   );

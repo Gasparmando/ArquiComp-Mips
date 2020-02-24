@@ -1,0 +1,18 @@
+
+
+
+// Instantiate the module
+ForwardingUnit instance_name (
+    .CLK(CLK), 
+    .RESET(RESET), 
+    .I_FU_EXE_RS(I_FU_EXE_RS), 
+    .I_FU_EXE_RT(I_FU_EXE_RT), 
+    .I_FU_MEM_regDst(I_FU_MEM_regDst), 
+    .I_FU_WB_regDst(I_FU_WB_regDst), 
+    .I_FU_MEM_RegWrite(I_FU_MEM_RegWrite), 
+    .I_FU_WB_RegWrite(I_FU_WB_RegWrite), 
+    .O_FU_ForwardA(O_FU_ForwardA), 
+    .O_FU_ForwardB(O_FU_ForwardB)
+    );
+
+

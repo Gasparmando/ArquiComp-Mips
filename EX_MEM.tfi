@@ -1,0 +1,22 @@
+
+
+
+// Instantiate the module
+EX_MEM instance_name (
+    .CLK(CLK), 
+    .RESET(RESET), 
+    .I_EXE_PC(I_EXE_PC), 
+    .I_EXE_ALU_result(I_EXE_ALU_result), 
+    .I_EXE_ZERO(I_EXE_ZERO), 
+    .I_EXE_WriteData(I_EXE_WriteData), 
+    .I_EXE_regDst(I_EXE_regDst), 
+    .I_EXE_ControlReg(I_EXE_ControlReg), 
+    .O_EXE_PC_out(O_EXE_PC_out), 
+    .O_EXE_ALU_result(O_EXE_ALU_result), 
+    .O_EXE_WriteData(O_EXE_WriteData), 
+    .O_EXE_regDst(O_EXE_regDst), 
+    .O_EXE_ControlReg(O_EXE_ControlReg), 
+    .O_EXE_ZERO(O_EXE_ZERO)
+    );
+
+

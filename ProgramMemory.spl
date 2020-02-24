@@ -1,0 +1,10 @@
+[Inputs]
+CLK
+RESET
+=ADDR[31:0]=
+[Outputs]
+=DATA[31:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel ProgramMemory
+

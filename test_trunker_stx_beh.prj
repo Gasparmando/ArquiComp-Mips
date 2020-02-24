@@ -1,0 +1,3 @@
+verilog isim_temp "Trunker.v"
+verilog isim_temp "test_trunker.v"
+verilog isim_temp "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

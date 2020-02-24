@@ -1,0 +1,14 @@
+
+
+
+// Instantiate the module
+Mux_4_1 instance_name (
+    .A(A), 
+    .B(B), 
+    .C(C), 
+    .D(D), 
+    .SEL(SEL), 
+    .OUT(OUT)
+    );
+
+

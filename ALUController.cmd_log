@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj TP4 -o C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4/ALUController.tfi -lib work C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4//ALUController.v -module ALUController -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
