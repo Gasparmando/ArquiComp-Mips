@@ -24,7 +24,7 @@ module MIPS2(
 	input I_MIPS_WrPM,
 	input [31:0] I_MIPS_WrDataPM,
 //////////////////////////////////////////////////////////////////////////////////
-	output [31:0] O_PC,
+	output [31:0] O_PC, O_PC_NEXT,
    output [31:0] O_ID_PC,
    output [31:0] O_ID_INSTR,
 //////////////////////////////////////////////////////////////////////////////////
@@ -163,6 +163,7 @@ wire [31:0] w_pc;
 wire [31:0] w_if_pc;
 wire [31:0] w_id_pc;
 wire [31:0] w_if_instr;
+wire [31:0] w_pc_branch;
 wire [31:0] w_pc_next;
 wire [31:0] w_id_instr;
 wire [19:0] w_id_control;
@@ -272,13 +273,25 @@ ProgramMemory PM (
     .O_REG_31(O_PM_REG_31)
     );
 //////////////////////////////////////////////////////////////////////////////////
+
 Mux_2_1 pc_mux (
     .A(w_if_pc), 
     .B(w_id_pc_out), 
     .SEL(w_branch_out), 
+    .OUT(w_pc_branch)
+    );
+
+//////////////////////////////////////////////////////////////////////////////////
+
+Mux_2_1 final_pc_mux (
+    .A(w_pc_branch), 
+    .B(w_id_signExt), 
+    .SEL(w_id_control[18]), 
     .OUT(w_pc_next)
     );
+	 
 //////////////////////////////////////////////////////////////////////////////////
+
 IF_ID if_id (
     .CLK(CLK), 
     .RESET(RESET), 
@@ -598,8 +611,8 @@ MEM_WB mem_wb (
 //////////////////////////////////////////////////////////////////////////////////
 
 Mux_4_1 mux_wb (
-    .A(w_wb_readData), 
-    .B(w_wb_addr),
+    .A(w_wb_addr), 
+    .B(w_wb_readData),
 	 .C(w_wb_shifted),
 	 .D(w_wb_pc_out),
     .SEL({w_wb_control[16] ,w_wb_control[0]}), 
@@ -619,6 +632,7 @@ assign w_branch_out = (w_and1 || w_and2 || w_id_control[18]);
 //////////////////////////////////////////////////////////////////////////////////
 /*salidas para DEBUG*/
    assign  O_PC = w_pc;
+	assign O_PC_NEXT = w_pc_next;
    assign  O_ID_PC = w_id_pc;
    assign  O_ID_INSTR = w_id_instr;
    assign  O_EXE_CONTROL = w_exe_control;
@@ -631,7 +645,7 @@ assign w_branch_out = (w_and1 || w_and2 || w_id_control[18]);
    assign  O_EXE_RD = w_exe_rd;
    assign  O_EXE_SHIFT = w_exe_shifted;
    assign  O_MEM_CONTROL = w_mem_control;
-   assign  O_MEM_ALU_RESULT = w_mem_read_data;
+   assign  O_MEM_ALU_RESULT = w_mem_addr;
    assign  O_MEM_WRITE_DATA = w_mem_write_data;
    assign  O_MEM_PC = w_mem_pc_out;
    assign  O_MEM_REGDST = w_mem_regDst;

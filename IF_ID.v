@@ -31,15 +31,22 @@ module IF_ID(
     output reg [31:0] O_IFID_PC
     );
     
+localparam NOP = 32'b1111_1000_0000_0000_0000_0000_0000_0000; 
+	
     always @(posedge CLK, posedge RESET)
     begin
-        if(RESET || I_IFID_FLUSH)
+        if(RESET )
         begin
             O_IFID_PC <= 0;
             O_IFID_INSTRUCTION <= 0;
         end
         else
-			if(I_IFID_WRITE)
+		  if(I_IFID_FLUSH)
+		  begin
+			   O_IFID_PC <= 0;
+            O_IFID_INSTRUCTION <= NOP;
+		  end
+		  else if(I_IFID_WRITE)
             begin
 				
                O_IFID_PC <= I_IFID_PC;

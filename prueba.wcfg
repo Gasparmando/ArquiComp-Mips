@@ -10,10 +10,15 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="37" />
+   <WVObjectSize size="41" />
    <wvobject fp_name="/test_mips/O_PC" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">O_PC[31:0]</obj_property>
       <obj_property name="ObjectShortName">O_PC[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_mips/uut/O_PC_NEXT" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">O_PC_NEXT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">O_PC_NEXT[31:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/test_mips/O_ID_PC" type="array" db_ref_id="1">
@@ -162,6 +167,20 @@
    <wvobject fp_name="/test_mips/O_RM_REG_2" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">O_RM_REG_2[31:0]</obj_property>
       <obj_property name="ObjectShortName">O_RM_REG_2[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_mips/O_RM_REG_5" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">O_RM_REG_5[31:0]</obj_property>
+      <obj_property name="ObjectShortName">O_RM_REG_5[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_mips/O_DM_REG_2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">O_DM_REG_2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">O_DM_REG_2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_mips/O_DM_REG_14" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">O_DM_REG_14[31:0]</obj_property>
+      <obj_property name="ObjectShortName">O_DM_REG_14[31:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/test_mips/CLK" type="logic" db_ref_id="1">

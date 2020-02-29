@@ -63,7 +63,7 @@ module ID_EX(
 				O_IDEX_ReadData1 <= I_IDEX_ReadData1;
 				O_IDEX_ReadData2 <= I_IDEX_ReadData2;
 				O_IDEX_SignExt <= I_IDEX_SignExt_in;
-				O_IDEX_RT <= I_IDEX_RT;
+				O_IDEX_RS <= I_IDEX_RS;
 				O_IDEX_RT <=I_IDEX_RT;
 				O_IDEX_RD <=I_IDEX_RD;
 				O_IDEX_SHIFT <= I_IDEX_SHIFT;

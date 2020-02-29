@@ -32,6 +32,7 @@ module test_mips;
 
 	// Outputs
 	wire [31:0] O_PC;
+	wire [31:0] O_PC_NEXT;
 	wire [31:0] O_ID_PC;
 	wire [31:0] O_ID_INSTR;
 	wire [19:0] O_EXE_CONTROL;
@@ -163,7 +164,8 @@ module test_mips;
 		.RESET(RESET), 
 		.I_MIPS_WrPM(I_MIPS_WrPM), 
 		.I_MIPS_WrDataPM(I_MIPS_WrDataPM), 
-		.O_PC(O_PC), 
+		.O_PC(O_PC),
+		.O_PC_NEXT(O_PC_NEXT),
 		.O_ID_PC(O_ID_PC), 
 		.O_ID_INSTR(O_ID_INSTR), 
 		.O_EXE_CONTROL(O_EXE_CONTROL), 

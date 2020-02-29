@@ -51,12 +51,12 @@ begin
 	end
 	else
 		begin
-			O_MEMWB_Control<=O_MEMWB_Control;
-			O_MEMWB_ReadData<=O_MEMWB_ReadData;
-			O_MEMWB_ADDR<=O_MEMWB_ADDR;
-			O_MEMWB_RegDst<=O_MEMWB_RegDst;
+			O_MEMWB_Control<=I_MEMWB_Control;
+			O_MEMWB_ReadData<=I_MEMWB_ReadData;
+			O_MEMWB_ADDR<=I_MEMWB_ADDR;
+			O_MEMWB_RegDst<=I_MEMWB_RegDst;
 			O_MEMWB_PC<=I_MEMWB_PC;
-			O_MEMWB_SHIFT<=O_MEMWB_SHIFT;
+			O_MEMWB_SHIFT<=I_MEMWB_SHIFT;
 		end
 end
 

@@ -61,6 +61,7 @@ localparam J = 6'b000010;
 localparam JAL = 6'b000011;
 localparam JR = 6'b001000;
 localparam JALR = 6'b001001;
+localparam NOP = 6'b111110;
 
 /*Operaciones de ALU*/
 localparam 
@@ -69,13 +70,32 @@ localparam
 			  AND = 6'b100100,	
 			  OR = 6'b100101,	
 			  XOR = 6'b100110,	
-			  SLT = 6'b101010;		
+			  SLT = 6'b101010;
+				
 			  
 
 
 always @(*)
 begin
 case(I_CU_OP)
+	NOP:
+		begin
+					O_CU_MemtoReg=0;
+					O_CU_RegWrite=0;
+					O_CU_MemWrite=0;
+					O_CU_MemRead=0;
+					O_CU_BranchEQ=0;
+					O_CU_ALUSrc=0;
+					O_CU_RegDst=0;
+					O_CU_ALUControl=NOP;	
+					O_CU_Trunk= 2'b00	;
+					O_CU_signed = 0;
+					O_CU_shift = 0;
+					O_CU_BranchNE=0;
+					O_CU_Jump = 0;
+					O_CU_LinkR =0;
+		end
+
 	TIPOR:
 		begin
 			case(I_CU_FUNCT)
