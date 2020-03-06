@@ -27,15 +27,6 @@ output TX
 	 
 	 
 	 
-localparam [2:0]
-WAIT_N = 3'b000,		//Esperar la cantidad de instrucciones de la uart
-RECEIVE_INSTR = 3'b001, //Lee todos los datos de la uart
-LOAD_PM = 3'b010, 	//Arma las instr de 32 bits y manda al PM
-WAIT_OP= 3'b011, //Espera RUN o DEBUG
-RUN = 3'b100,		//Modo RUN
-SEND_RUN = 3'b101,	//Envia al terminar de correr todo el programa
-DEBUG =3'b110,			//Modo Debug paso a paso
-SEND_DEBUG = 3'b111;	//Envia despeus de cada ciclo de clk
 
 	 
 wire [31:0] W_PC; 
@@ -168,6 +159,165 @@ wire [31:0] W_RM_REG_31;
 wire W_TX_FULL;
 wire W_WR_UART;
 wire [7:0] W_DATA_UART;
+
+
+
+localparam [2:0]
+WAIT_N = 3'b000,		//Esperar la cantidad de instrucciones de la uart
+RECEIVE_INSTR = 3'b001, //Lee todos los datos de la uart
+LOAD_PM = 3'b010, 	//Arma las instr de 32 bits y manda al PM
+WAIT_OP= 3'b011, //Espera RUN o DEBUG
+RUN = 3'b100,		//Modo RUN
+SEND = 3'b101,	//Envia al terminar de correr todo el programa
+DEBUG =3'b110;			//Modo Debug paso a paso
+
+reg W_RD_UART;
+wire W_RX_EMPTY;
+wire [7:0] W_R_DATA;
+reg [31:0] W_MIPS_WrDataPM;
+reg W_MIPS_WrPM;
+reg readRegs;
+reg [2:0] state, state_next = WAIT_N;
+
+reg [31:0] N, N_next, N_CONST;
+
+reg [7:0] datos_recibidos [7:0];
+integer i = 0, j=0;
+
+always@(posedge CLK, posedge RESET)
+	begin
+		if(RESET)
+			begin
+				state<= WAIT_N;
+				N<=0;
+			end
+		else
+			state<=state_next;
+			N<=N_next;
+	end
+
+always@(*)
+begin
+			state_next = state;
+			N_next = N;
+			W_RD_UART = 0;
+			W_MIPS_WrPM = 0;
+			readRegs = 0;
+			R_D=0;
+			
+			case (state)
+				WAIT_N:
+					begin
+						if(~W_RX_EMPTY)
+							begin
+								N_CONST = W_RX_DATA;
+								N_next = W_RX_DATA;
+								W_RD_UART = 1;
+								state_next = RECEIVE_INSTR;
+								i=0;
+							end
+						else
+							state_next=WAIT_N;
+							
+					end
+					
+				RECEIVE_INSTR:
+					begin
+						if(N>0)
+							begin
+								if(~W_RX_EMPTY)
+									begin
+										datos_recibidos[i] = W_R_DATA;
+										W_RD_UART = 1;
+										i=i+1;										
+										N_next = N - 1;
+									end
+								
+									state_next = RECEIVE_INSTR;
+							end
+						else
+							begin
+								state_next=LOAD_PM;
+								j=0;
+								
+							end
+						
+					end
+					
+				LOAD_PM:
+					begin
+						if(j<=N_CONST/4)
+							begin
+								W_MIPS_WrDataPM = {datos_recibidos[(4*j)],datos_recibidos[(4*j)+1],datos_recibidos[(4*j)+2],datos_recibidos[(4*j)+3] };
+								W_MIPS_WrPM = 1;
+								j=j+1;
+								state_next= LOAD_PM;
+							end
+						else
+							begin
+								state_next = WAIT_OP;
+							end
+						
+						
+					end
+					
+				WAIT_OP:
+					begin
+						if(~W_RX_EMPTY)
+							begin
+								if(W_R_DATA==49)		//caracter '1'
+									begin
+										state_next=RUN;
+									end
+								else if(W_R_DATA==50) //caracter '2'
+									begin
+										state_next=DEBUG;
+									end
+								else if(W_R_DATA==51) //caracter '3'
+									begin
+										state_next=WAIT_N;
+									end
+								else
+									begin
+										state_next= WAIT_OP;
+									end
+							end
+						else
+							state_next = WAIT_OP;
+					end
+					
+				RUN:
+					begin
+						R_D = 1;
+						if(W_MIPS_FINISHED)
+							begin
+								state_next=SEND;
+								R_D=0;
+							end
+						else
+							state_next = RUN;
+						
+					end
+				
+				SEND:
+					begin
+						readRegs = 1;
+						state_next = WAIT_OP;
+					end
+					
+				DEBUG:
+					begin
+						R_D=1;
+						state_next=SEND;
+						
+					end
+										
+				endcase
+				
+
+end
+
+
 
 
 DebugUnit debut_unit (
@@ -306,8 +456,13 @@ DebugUnit debut_unit (
     .I_ITERACIONES(W_ITERACIONES)
     );
 	 
+	 wire CLK_MIPS;
+	 reg R_D;
+	 
+	 assign CLK_MIPS = CLK && R_D;
+	 
 	 MIPS2 mips (
-    .CLK(CLK), 
+    .CLK(CLK_MIPS), 
     .RESET(RESET), 
     .I_MIPS_WrPM(W_MIPS_WrPM), 
     .I_MIPS_WrDataPM(W_MIPS_WrDataPM), 
@@ -442,14 +597,14 @@ DebugUnit debut_unit (
 UART uart (
     .CLK(CLK), 
     .RESET(RESET), 
-    .rd_uart( ), 
+    .rd_uart(W_RD_UART), 
     .wr_uart(W_WR_UART), 
     .rx(RX), 
     .w_data(W_DATA_UART), 
     .tx_full(W_TX_FULL), 
-    .rx_empty( ), 
+    .rx_empty(W_RX_EMPTY), 
     .tx(TX), 
-    .r_data( )
+    .r_data(W_R_DATA)
     );
 
 
