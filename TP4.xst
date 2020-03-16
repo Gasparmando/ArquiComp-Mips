@@ -1,6 +1,9 @@
-set -tmpdir "C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4/xst/projnav.tmp"
-set -xsthdpdir "C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4/xst"
-run -compileonly yes
+set -tmpdir "xst/projnav.tmp"
+set -xsthdpdir "xst"
+run
+-ifn TP4.prj
+-ofn TP4
+-ofmt NGC
 -p xc7a100t-3-csg324
 -top TP4
 -opt_mode Speed
@@ -47,4 +50,3 @@ run -compileonly yes
 -iob Auto
 -equivalent_register_removal YES
 -slice_utilization_ratio_maxmargin 5
--ifn TP4.prj

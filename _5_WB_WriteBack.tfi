@@ -1,9 +1,0 @@
-
-
-
-// Instantiate the module
-_5_WB_WriteBack instance_name (
-    .()
-    );
-
-

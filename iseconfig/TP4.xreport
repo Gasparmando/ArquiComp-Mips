@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2020-03-06T18:16:49</DateModified>
+  <DateModified>2020-03-12T19:36:42</DateModified>
   <ModuleName>TP4</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
+  <SummaryTimeStamp>2020-03-12T18:59:47</SummaryTimeStamp>
   <SavedFilePath>C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4/iseconfig/TP4.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4\</ImplementationReportsDirectory>
   <DateInitialized>2020-03-06T18:16:48</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

@@ -1,8 +1,0 @@
-[Inputs]
-CLK
-RESET
-[Outputs]
-[BiDir]
-[ATTRIBUTES]
-VeriModel MIPS2
-

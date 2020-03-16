@@ -62,6 +62,7 @@ localparam JAL = 6'b000011;
 localparam JR = 6'b001000;
 localparam JALR = 6'b001001;
 localparam NOP = 6'b111110;
+localparam HALT = 6'b010101;
 
 /*Operaciones de ALU*/
 localparam 
@@ -476,6 +477,23 @@ case(I_CU_OP)
 					O_CU_ALUSrc=1;
 					O_CU_RegDst=0;
 					O_CU_ALUControl= XOR;	
+					O_CU_Trunk= 2'b00;
+					O_CU_signed = 0;
+					O_CU_shift = 0;
+					O_CU_BranchNE=0;
+					O_CU_Jump = 0;
+					O_CU_LinkR =0;
+		end
+	HALT:
+		begin
+					O_CU_MemtoReg=0;
+					O_CU_RegWrite=0;
+					O_CU_MemWrite=0;
+					O_CU_MemRead=0;
+					O_CU_BranchEQ=0;
+					O_CU_ALUSrc=0;
+					O_CU_RegDst=0;
+					O_CU_ALUControl= 0;	
 					O_CU_Trunk= 2'b00;
 					O_CU_signed = 0;
 					O_CU_shift = 0;

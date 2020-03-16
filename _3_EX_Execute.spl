@@ -1,9 +1,0 @@
-[Inputs]
-CLK
-RESET
-=PC[31:0]=
-[Outputs]
-[BiDir]
-[ATTRIBUTES]
-VeriModel _3_EX_Execute
-

@@ -70,8 +70,6 @@ module RegisterMemory(
 	begin
 		if(RESET)
 			begin
-				O_REGMEM_READ_DATA_1<=0;
-				O_REGMEM_READ_DATA_2<=0;
 				for(i=0;i<32;i=i+1)
 					REG[i]<=0;
 			end

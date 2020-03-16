@@ -1,0 +1,76 @@
+Release 14.7 - par P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Thu Mar 12 19:47:10 2020
+
+All signals are completely routed.
+
+WARNING:ParHelpers:361 - There are 64 loadless signals in this design. This design will cause Bitgen to issue DRC
+   warnings.
+
+   uart/fifo_rx/Mram_cola_circular10_RAMD_O
+   uart/fifo_rx/Mram_cola_circular11_RAMD_O
+   uart/fifo_rx/Mram_cola_circular12_RAMD_O
+   uart/fifo_rx/Mram_cola_circular13_RAMD_O
+   uart/fifo_rx/Mram_cola_circular14_RAMD_O
+   uart/fifo_rx/Mram_cola_circular15_RAMD_O
+   uart/fifo_rx/Mram_cola_circular16_RAMD_O
+   uart/fifo_rx/Mram_cola_circular17_RAMD_O
+   uart/fifo_rx/Mram_cola_circular18_RAMD_O
+   uart/fifo_rx/Mram_cola_circular19_RAMD_O
+   uart/fifo_rx/Mram_cola_circular1_RAMD_O
+   uart/fifo_rx/Mram_cola_circular20_RAMD_O
+   uart/fifo_rx/Mram_cola_circular21_RAMD_O
+   uart/fifo_rx/Mram_cola_circular22_RAMD_O
+   uart/fifo_rx/Mram_cola_circular23_RAMD_O
+   uart/fifo_rx/Mram_cola_circular24_RAMD_O
+   uart/fifo_rx/Mram_cola_circular25_RAMD_O
+   uart/fifo_rx/Mram_cola_circular26_RAMD_O
+   uart/fifo_rx/Mram_cola_circular27_RAMD_O
+   uart/fifo_rx/Mram_cola_circular28_RAMD_O
+   uart/fifo_rx/Mram_cola_circular29_RAMD_O
+   uart/fifo_rx/Mram_cola_circular2_RAMD_O
+   uart/fifo_rx/Mram_cola_circular30_RAMD_O
+   uart/fifo_rx/Mram_cola_circular31_RAMD_O
+   uart/fifo_rx/Mram_cola_circular32_RAMD_O
+   uart/fifo_rx/Mram_cola_circular3_RAMD_O
+   uart/fifo_rx/Mram_cola_circular4_RAMD_O
+   uart/fifo_rx/Mram_cola_circular5_RAMD_O
+   uart/fifo_rx/Mram_cola_circular6_RAMD_O
+   uart/fifo_rx/Mram_cola_circular7_RAMD_O
+   uart/fifo_rx/Mram_cola_circular8_RAMD_O
+   uart/fifo_rx/Mram_cola_circular9_RAMD_O
+   uart/fifo_tx/Mram_cola_circular10_RAMD_O
+   uart/fifo_tx/Mram_cola_circular11_RAMD_O
+   uart/fifo_tx/Mram_cola_circular12_RAMD_O
+   uart/fifo_tx/Mram_cola_circular13_RAMD_O
+   uart/fifo_tx/Mram_cola_circular14_RAMD_O
+   uart/fifo_tx/Mram_cola_circular15_RAMD_O
+   uart/fifo_tx/Mram_cola_circular16_RAMD_O
+   uart/fifo_tx/Mram_cola_circular17_RAMD_O
+   uart/fifo_tx/Mram_cola_circular18_RAMD_O
+   uart/fifo_tx/Mram_cola_circular19_RAMD_O
+   uart/fifo_tx/Mram_cola_circular1_RAMD_O
+   uart/fifo_tx/Mram_cola_circular20_RAMD_O
+   uart/fifo_tx/Mram_cola_circular21_RAMD_O
+   uart/fifo_tx/Mram_cola_circular22_RAMD_O
+   uart/fifo_tx/Mram_cola_circular23_RAMD_O
+   uart/fifo_tx/Mram_cola_circular24_RAMD_O
+   uart/fifo_tx/Mram_cola_circular25_RAMD_O
+   uart/fifo_tx/Mram_cola_circular26_RAMD_O
+   uart/fifo_tx/Mram_cola_circular27_RAMD_O
+   uart/fifo_tx/Mram_cola_circular28_RAMD_O
+   uart/fifo_tx/Mram_cola_circular29_RAMD_O
+   uart/fifo_tx/Mram_cola_circular2_RAMD_O
+   uart/fifo_tx/Mram_cola_circular30_RAMD_O
+   uart/fifo_tx/Mram_cola_circular31_RAMD_O
+   uart/fifo_tx/Mram_cola_circular32_RAMD_O
+   uart/fifo_tx/Mram_cola_circular3_RAMD_O
+   uart/fifo_tx/Mram_cola_circular4_RAMD_O
+   uart/fifo_tx/Mram_cola_circular5_RAMD_O
+   uart/fifo_tx/Mram_cola_circular6_RAMD_O
+   uart/fifo_tx/Mram_cola_circular7_RAMD_O
+   uart/fifo_tx/Mram_cola_circular8_RAMD_O
+   uart/fifo_tx/Mram_cola_circular9_RAMD_O
+
+

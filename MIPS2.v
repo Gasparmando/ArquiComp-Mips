@@ -24,6 +24,7 @@ module MIPS2(
 	input I_MIPS_WrPM,
 	input [31:0] I_MIPS_WrDataPM,
 //////////////////////////////////////////////////////////////////////////////////
+	output reg O_MIPS_FINISHED,
 	output [31:0] O_PC, O_PC_NEXT,
    output [31:0] O_ID_PC,
    output [31:0] O_ID_INSTR,
@@ -663,5 +664,11 @@ assign w_branch_out = (w_and1 || w_and2 || w_id_control[18]);
    
    assign  O_FU_ForwardA = w_exe_forwardA;
    assign  O_FU_ForwardB = w_exe_forwardB;
+	
+	always @(posedge CLK, posedge RESET)
+		if(RESET)
+			begin
+				O_MIPS_FINISHED<=0;
+			end
 
 endmodule

@@ -1,0 +1,158 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7
+# Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+# Start of session at: Thu Mar 12 15:07:35 2020
+# Process ID: 2464
+# Log file: D:/workspace/ArquitecturaDeComputadoras/TP4/planAhead_run_2/planAhead.log
+# Journal file: D:/workspace/ArquitecturaDeComputadoras/TP4/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source D:/workspace/ArquitecturaDeComputadoras/TP4/pa.fromHdl.tcl
+# create_project -name TP4 -dir "D:/workspace/ArquitecturaDeComputadoras/TP4/planAhead_run_2" -part xc7a100tcsg324-3
+create_project: Time (s): elapsed = 00:00:11 . Memory (MB): peak = 373.781 ; gain = 40.859
+# set_param project.pinAheadLayout yes
+# set srcset [get_property srcset [current_run -impl]]
+# set_property target_constrs_file "TP4.ucf" [current_fileset -constrset]
+Adding file 'D:/workspace/ArquitecturaDeComputadoras/TP4/TP4.ucf' to fileset 'constrs_1'
+# set hdlfile [add_files [list {Tx.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {Trunker.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {signExtension.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {Shift16.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {Rx.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {RegisterMemory.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {ProgramMemory.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {PC.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {Mux_4_1.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {Mux.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {MEM_WB.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {IF_ID.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {ID_EX.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {HazardDetectionUnit.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {ForwardingUnit.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {FIFO.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {EX_MEM.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {DataMemory.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {ControlUnit.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {comparator.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {BaudRateGen.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {ALU.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {UART.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {MIPS2.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {DebugUnit.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {TP4.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set_property top TP4 $srcset
+# add_files [list {TP4.ucf}] -fileset [get_property constrset [current_run]]
+# open_rtl_design -part xc7a100tcsg324-3
+Using Verific elaboration
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Analyzing Verilog file "D:/workspace/ArquitecturaDeComputadoras/TP4/Tx.v" into library work
+Analyzing Verilog file "D:/workspace/ArquitecturaDeComputadoras/TP4/Trunker.v" into library work
+Analyzing Verilog file "D:/workspace/ArquitecturaDeComputadoras/TP4/signExtension.v" into library work
+Analyzing Verilog file "D:/workspace/ArquitecturaDeComputadoras/TP4/Shift16.v" into library work
+Analyzing Verilog file "D:/workspace/ArquitecturaDeComputadoras/TP4/Rx.v" into library work
+Analyzing Verilog file "D:/workspace/ArquitecturaDeComputadoras/TP4/RegisterMemory.v" into library work
+Analyzing Verilog file "D:/workspace/ArquitecturaDeComputadoras/TP4/ProgramMemory.v" into library work
+Analyzing Verilog file "D:/workspace/ArquitecturaDeComputadoras/TP4/PC.v" into library work
+Analyzing Verilog file "D:/workspace/ArquitecturaDeComputadoras/TP4/Mux_4_1.v" into library work
+Analyzing Verilog file "D:/workspace/ArquitecturaDeComputadoras/TP4/Mux.v" into library work
+Analyzing Verilog file "D:/workspace/ArquitecturaDeComputadoras/TP4/MEM_WB.v" into library work
+Analyzing Verilog file "D:/workspace/ArquitecturaDeComputadoras/TP4/IF_ID.v" into library work
+Analyzing Verilog file "D:/workspace/ArquitecturaDeComputadoras/TP4/ID_EX.v" into library work
+Analyzing Verilog file "D:/workspace/ArquitecturaDeComputadoras/TP4/HazardDetectionUnit.v" into library work
+Analyzing Verilog file "D:/workspace/ArquitecturaDeComputadoras/TP4/ForwardingUnit.v" into library work
+Analyzing Verilog file "D:/workspace/ArquitecturaDeComputadoras/TP4/FIFO.v" into library work
+Analyzing Verilog file "D:/workspace/ArquitecturaDeComputadoras/TP4/EX_MEM.v" into library work
+Analyzing Verilog file "D:/workspace/ArquitecturaDeComputadoras/TP4/DataMemory.v" into library work
+Analyzing Verilog file "D:/workspace/ArquitecturaDeComputadoras/TP4/ControlUnit.v" into library work
+Analyzing Verilog file "D:/workspace/ArquitecturaDeComputadoras/TP4/comparator.v" into library work
+Analyzing Verilog file "D:/workspace/ArquitecturaDeComputadoras/TP4/BaudRateGen.v" into library work
+Analyzing Verilog file "D:/workspace/ArquitecturaDeComputadoras/TP4/ALU.v" into library work
+Analyzing Verilog file "D:/workspace/ArquitecturaDeComputadoras/TP4/UART.v" into library work
+Analyzing Verilog file "D:/workspace/ArquitecturaDeComputadoras/TP4/MIPS2.v" into library work
+Analyzing Verilog file "D:/workspace/ArquitecturaDeComputadoras/TP4/DebugUnit.v" into library work
+Analyzing Verilog file "D:/workspace/ArquitecturaDeComputadoras/TP4/TP4.v" into library work
+Loading clock regions from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/artix7/xc7a100t/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/artix7/xc7a100t/ClockBuffers.xml
+Loading clock placement rules from C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/artix7/ClockPlacerRules.xml
+Loading package pin functions from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/PinFunctions.xml...
+Loading package from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/artix7/xc7a100t/csg324/Package.xml
+Loading io standards from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/artix7/IOStandards.xml
+Loading device configuration modes from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/ConfigModes.xml
+Loading list of drcs for the architecture : C:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/artix7/drc.xml
+Parsing UCF File [D:/workspace/ArquitecturaDeComputadoras/TP4/TP4.ucf]
+Finished Parsing UCF File [D:/workspace/ArquitecturaDeComputadoras/TP4/TP4.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: 96d72763
+open_rtl_design: Time (s): elapsed = 00:01:24 . Memory (MB): peak = 700.250 ; gain = 318.281
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Common 17-344] 'source' was cancelled
+update_compile_order -fileset sim_1
+exit
+ERROR: [PlanAhead 12-106] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
+HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
+HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
+HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
+ (See D:/workspace/ArquitecturaDeComputadoras/TP4\planAhead_pid2464.debug)
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Thu Mar 12 15:22:39 2020...
+INFO: [Common 17-83] Releasing license: PlanAhead

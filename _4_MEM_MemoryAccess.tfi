@@ -1,9 +1,0 @@
-
-
-
-// Instantiate the module
-_4_MEM_MemoryAccess instance_name (
-    .()
-    );
-
-

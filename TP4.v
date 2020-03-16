@@ -160,7 +160,9 @@ wire W_TX_FULL;
 wire W_WR_UART;
 wire [7:0] W_DATA_UART;
 
-
+reg W_RD_UART;
+wire W_RX_EMPTY;
+wire [7:0] W_R_DATA;
 
 localparam [2:0]
 WAIT_N = 3'b000,		//Esperar la cantidad de instrucciones de la uart
@@ -171,9 +173,7 @@ RUN = 3'b100,		//Modo RUN
 SEND = 3'b101,	//Envia al terminar de correr todo el programa
 DEBUG =3'b110;			//Modo Debug paso a paso
 
-reg W_RD_UART;
-wire W_RX_EMPTY;
-wire [7:0] W_R_DATA;
+
 reg [31:0] W_MIPS_WrDataPM;
 reg W_MIPS_WrPM;
 reg readRegs;
@@ -188,12 +188,14 @@ always@(posedge CLK, posedge RESET)
 	begin
 		if(RESET)
 			begin
-				state<= WAIT_N;
+				state<= DEBUG;			//CAMBIAR A WAIT_N
 				N<=0;
 			end
 		else
-			state<=state_next;
-			N<=N_next;
+			begin
+				state<=state_next;
+				N<=N_next;
+			end
 	end
 
 always@(*)
@@ -210,8 +212,8 @@ begin
 					begin
 						if(~W_RX_EMPTY)
 							begin
-								N_CONST = W_RX_DATA;
-								N_next = W_RX_DATA;
+								N_CONST = W_R_DATA;
+								N_next = W_R_DATA;
 								W_RD_UART = 1;
 								state_next = RECEIVE_INSTR;
 								i=0;
@@ -466,6 +468,7 @@ DebugUnit debut_unit (
     .RESET(RESET), 
     .I_MIPS_WrPM(W_MIPS_WrPM), 
     .I_MIPS_WrDataPM(W_MIPS_WrDataPM), 
+	 .O_MIPS_FINISHED(W_MIPS_FINISHED),
     .O_PC(W_PC), 
     .O_PC_NEXT(W_PC_NEXT), 
     .O_ID_PC(W_ID_PC), 

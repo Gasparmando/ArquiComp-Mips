@@ -164,7 +164,7 @@ module DebugUnit(
 	 
     );
 
-localparam N_DATOS = 126;
+localparam N_DATOS = 127;
 
 reg [31:0] datos[N_DATOS-1:0];
 
@@ -185,18 +185,16 @@ reg [3:0] state, state_next;
 	begin
 		if(RESET)
 			begin
-				for(i = 0;i<N_DATOS;i=i+1)
+				/*for(i = 0;i<N_DATOS;i=i+1)
 					begin
-						datos[i]<=0;
+						datos[i]=0;
 						bytesParaEnviar[i]<=0;
 						bytesParaEnviar[i+1]<=0;
 						bytesParaEnviar[i+2]<=0;
 						bytesParaEnviar[i+3]<=0;
-						state<= IDLE;
-						state_next<=IDLE;
-						n<=0;
-						n_next<=0;
-					end
+					end*/
+					state<= IDLE;				
+					
 			end
 		else
 			begin
@@ -218,7 +216,7 @@ reg [3:0] state, state_next;
 							if(readRegs)
 								begin
 									state_next = READ_DATA;
-									n=0;
+									n_next=0;
 								end
 							else
 								state_next = IDLE;
@@ -374,7 +372,7 @@ reg [3:0] state, state_next;
 						state_next=SEND;
 					end
 					
-					SEND:
+				SEND:
 						begin
 							if(n<(4*N_DATOS))
 								begin
