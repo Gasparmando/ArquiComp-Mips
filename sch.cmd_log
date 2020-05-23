@@ -1,8 +1,0 @@
-sch2hdl -intstyle ise -family artix7 -verilog sch_drc.vf -w C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4/sch.sch 
-sch2hdl -intstyle ise -family artix7 -verilog sch.vf -w C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4/sch.sch 
-sch2verilog -intstyle ise -family artix7 -tionly {} -tiext tfi -w C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4/sch.sch sch.tfi 
-sch2hdl -intstyle ise -family artix7 -verilog sch.vf -w C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4/sch.sch 
-sch2sym -intstyle ise -family artix7 -refsym sch C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4/sch.sch C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4/sch.sym 
-sch2hdl -intstyle ise -family artix7 -verilog sch_drc.vf -w C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4/sch.sch 
-sch2hdl -intstyle ise -family artix7 -verilog sch.vf -w C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4/sch.sch 
-sch2hdl -intstyle ise -family artix7 -verilog sch.vf -w C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4/sch.sch 

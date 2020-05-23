@@ -1,3 +1,0 @@
-vhdtdtfi -lang verilog -prj TP4 -o C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4/_3_EX_Execute.tfi -lib work C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4//EX_Execute.v -module _3_EX_Execute -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
-vhdtdtfi -lib work C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4/EX_Execute.v -lang verilog -prj TP4 -o _3_EX_Execute.spl -module _3_EX_Execute -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
-spl2sym -intstyle ise -family artix7 _3_EX_Execute.spl C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4/_3_EX_Execute.sym 

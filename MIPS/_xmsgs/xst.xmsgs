@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:\Users\gaspa\Documents\win7VM\workspace\ArquitecturaDeComputadoras\TP4_Final\MIPS\TP4.v" Line 201: Assignment to <arg fmt="%s" index="1">W_RD_UART</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:\Users\gaspa\Documents\win7VM\workspace\ArquitecturaDeComputadoras\TP4_Final\MIPS\TP4.v" Line 330: Assignment to <arg fmt="%s" index="1">W_WR_UART</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:\Users\gaspa\Documents\win7VM\workspace\ArquitecturaDeComputadoras\TP4_Final\MIPS\TP4.v" Line 331: Assignment to <arg fmt="%s" index="1">W_DATA_UART</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"C:\Users\gaspa\Documents\win7VM\workspace\ArquitecturaDeComputadoras\TP4_Final\MIPS\TP4.v" Line 336: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">I_EXE_CONTROL</arg>&gt;. Formal port size is <arg fmt="%d" index="2">20</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"C:\Users\gaspa\Documents\win7VM\workspace\ArquitecturaDeComputadoras\TP4_Final\MIPS\TP4.v" Line 345: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">I_MEM_CONTROL</arg>&gt;. Formal port size is <arg fmt="%d" index="2">20</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"C:\Users\gaspa\Documents\win7VM\workspace\ArquitecturaDeComputadoras\TP4_Final\MIPS\TP4.v" Line 349: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">I_MEM_REGDST</arg>&gt;. Formal port size is <arg fmt="%d" index="2">5</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"C:\Users\gaspa\Documents\win7VM\workspace\ArquitecturaDeComputadoras\TP4_Final\MIPS\TP4.v" Line 351: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">I_WB_CONTROL</arg>&gt;. Formal port size is <arg fmt="%d" index="2">20</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"C:\Users\gaspa\Documents\win7VM\workspace\ArquitecturaDeComputadoras\TP4_Final\MIPS\TP4.v" Line 356: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">I_WB_REGDST</arg>&gt;. Formal port size is <arg fmt="%d" index="2">5</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"C:\Users\gaspa\Documents\win7VM\workspace\ArquitecturaDeComputadoras\TP4_Final\MIPS\TP4.v" Line 357: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">I_HZ_IFID_WRITE</arg>&gt;. Formal port size is <arg fmt="%d" index="2">1</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"C:\Users\gaspa\Documents\win7VM\workspace\ArquitecturaDeComputadoras\TP4_Final\MIPS\TP4.v" Line 358: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">I_HZ_PC_WRITE</arg>&gt;. Formal port size is <arg fmt="%d" index="2">1</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"C:\Users\gaspa\Documents\win7VM\workspace\ArquitecturaDeComputadoras\TP4_Final\MIPS\TP4.v" Line 359: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">I_HZ_ID_ControlMux</arg>&gt;. Formal port size is <arg fmt="%d" index="2">1</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"C:\Users\gaspa\Documents\win7VM\workspace\ArquitecturaDeComputadoras\TP4_Final\MIPS\TP4.v" Line 360: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">I_FU_ForwardA</arg>&gt;. Formal port size is <arg fmt="%d" index="2">2</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"C:\Users\gaspa\Documents\win7VM\workspace\ArquitecturaDeComputadoras\TP4_Final\MIPS\TP4.v" Line 361: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">I_FU_ForwardB</arg>&gt;. Formal port size is <arg fmt="%d" index="2">2</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"C:\Users\gaspa\Documents\win7VM\workspace\ArquitecturaDeComputadoras\TP4_Final\MIPS\TP4.v" Line 458: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">I_ITERACIONES</arg>&gt;. Formal port size is <arg fmt="%d" index="2">32</arg>-bit while actual signal size is <arg fmt="%d" index="1">1</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"C:\Users\gaspa\Documents\win7VM\workspace\ArquitecturaDeComputadoras\TP4_Final\MIPS\RegisterMemory.v" Line 87: Signal &lt;<arg fmt="%s" index="1">REG</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"C:\Users\gaspa\Documents\win7VM\workspace\ArquitecturaDeComputadoras\TP4_Final\MIPS\RegisterMemory.v" Line 88: Signal &lt;<arg fmt="%s" index="1">REG</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="552" delta="new" >"C:\Users\gaspa\Documents\win7VM\workspace\ArquitecturaDeComputadoras\TP4_Final\MIPS\MIPS2.v" Line 456: Input port <arg fmt="%s" index="1">D[31]</arg> is not connected on this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="552" delta="new" >"C:\Users\gaspa\Documents\win7VM\workspace\ArquitecturaDeComputadoras\TP4_Final\MIPS\MIPS2.v" Line 476: Input port <arg fmt="%s" index="1">D[31]</arg> is not connected on this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="552" delta="new" >"C:\Users\gaspa\Documents\win7VM\workspace\ArquitecturaDeComputadoras\TP4_Final\MIPS\MIPS2.v" Line 496: Input port <arg fmt="%s" index="1">D[4]</arg> is not connected on this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"C:\Users\gaspa\Documents\win7VM\workspace\ArquitecturaDeComputadoras\TP4_Final\MIPS\TP4.v" Line 476: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">O_EXE_CONTROL</arg>&gt;. Formal port size is <arg fmt="%d" index="2">20</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"C:\Users\gaspa\Documents\win7VM\workspace\ArquitecturaDeComputadoras\TP4_Final\MIPS\TP4.v" Line 485: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">O_MEM_CONTROL</arg>&gt;. Formal port size is <arg fmt="%d" index="2">20</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"C:\Users\gaspa\Documents\win7VM\workspace\ArquitecturaDeComputadoras\TP4_Final\MIPS\TP4.v" Line 489: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">O_MEM_REGDST</arg>&gt;. Formal port size is <arg fmt="%d" index="2">5</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"C:\Users\gaspa\Documents\win7VM\workspace\ArquitecturaDeComputadoras\TP4_Final\MIPS\TP4.v" Line 491: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">O_WB_CONTROL</arg>&gt;. Formal port size is <arg fmt="%d" index="2">20</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"C:\Users\gaspa\Documents\win7VM\workspace\ArquitecturaDeComputadoras\TP4_Final\MIPS\TP4.v" Line 496: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">O_WB_REGDST</arg>&gt;. Formal port size is <arg fmt="%d" index="2">5</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"C:\Users\gaspa\Documents\win7VM\workspace\ArquitecturaDeComputadoras\TP4_Final\MIPS\TP4.v" Line 497: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">O_HZ_IFID_WRITE</arg>&gt;. Formal port size is <arg fmt="%d" index="2">1</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"C:\Users\gaspa\Documents\win7VM\workspace\ArquitecturaDeComputadoras\TP4_Final\MIPS\TP4.v" Line 498: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">O_HZ_PC_WRITE</arg>&gt;. Formal port size is <arg fmt="%d" index="2">1</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"C:\Users\gaspa\Documents\win7VM\workspace\ArquitecturaDeComputadoras\TP4_Final\MIPS\TP4.v" Line 499: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">O_HZ_ID_ControlMux</arg>&gt;. Formal port size is <arg fmt="%d" index="2">1</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"C:\Users\gaspa\Documents\win7VM\workspace\ArquitecturaDeComputadoras\TP4_Final\MIPS\TP4.v" Line 500: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">O_FU_ForwardA</arg>&gt;. Formal port size is <arg fmt="%d" index="2">2</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"C:\Users\gaspa\Documents\win7VM\workspace\ArquitecturaDeComputadoras\TP4_Final\MIPS\TP4.v" Line 501: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">O_FU_ForwardB</arg>&gt;. Formal port size is <arg fmt="%d" index="2">2</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"C:\Users\gaspa\Documents\win7VM\workspace\ArquitecturaDeComputadoras\TP4_Final\MIPS\TP4.v" Line 159: Net &lt;<arg fmt="%s" index="1">W_TX_FULL</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"C:\Users\gaspa\Documents\win7VM\workspace\ArquitecturaDeComputadoras\TP4_Final\MIPS\TP4.v" Line 164: Net &lt;<arg fmt="%s" index="1">W_RX_EMPTY</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"C:\Users\gaspa\Documents\win7VM\workspace\ArquitecturaDeComputadoras\TP4_Final\MIPS\TP4.v" Line 165: Net &lt;<arg fmt="%s" index="1">W_R_DATA[7]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"C:\Users\gaspa\Documents\win7VM\workspace\ArquitecturaDeComputadoras\TP4_Final\MIPS\TP4.v" Line 458: Net &lt;<arg fmt="%s" index="1">W_ITERACIONES</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\gaspa\Documents\win7VM\workspace\ArquitecturaDeComputadoras\TP4_Final\MIPS\TP4.v</arg>&quot; line <arg fmt="%d" index="2">325</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">debut_unit</arg>&gt; of block &lt;<arg fmt="%s" index="4">DebugUnit</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">TP4</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\gaspa\Documents\win7VM\workspace\ArquitecturaDeComputadoras\TP4_Final\MIPS\TP4.v</arg>&quot; line <arg fmt="%d" index="2">466</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">mips</arg>&gt; of block &lt;<arg fmt="%s" index="4">MIPS2</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">TP4</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">RX</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\gaspa\Documents\win7VM\workspace\ArquitecturaDeComputadoras\TP4_Final\MIPS\TP4.v</arg>&quot; line <arg fmt="%s" index="2">325</arg>: Output port &lt;<arg fmt="%s" index="3">O_DATA_UART</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">debut_unit</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\gaspa\Documents\win7VM\workspace\ArquitecturaDeComputadoras\TP4_Final\MIPS\TP4.v</arg>&quot; line <arg fmt="%s" index="2">325</arg>: Output port &lt;<arg fmt="%s" index="3">O_WR_UART</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">debut_unit</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">W_R_DATA</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">W_TX_FULL</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">W_RX_EMPTY</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">W_ITERACIONES</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CLK</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">RESET</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CLK</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">RESET</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+</messages>
+

@@ -1,0 +1,13 @@
+
+
+
+// Instantiate the module
+TP4 instance_name (
+    .CLK(CLK), 
+    .RESET(RESET), 
+    .INSTRUCTION(INSTRUCTION), 
+    .FLAG_I(FLAG_I), 
+    .FLAG_STEP(FLAG_STEP)
+    );
+
+

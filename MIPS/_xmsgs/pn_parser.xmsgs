@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated   -->
+<!--     by the Xilinx ISE software.  Any direct editing or        -->
+<!--     changes made to this file may result in unpredictable     -->
+<!--     behavior or data corruption.  It is strongly advised that -->
+<!--     users do not edit the contents of this file.              -->
+<!--                                                               -->
+<!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
+
+<messages>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/ALU.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/ControlUnit.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/DataMemory.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/DebugUnit.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/EX_MEM.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/FIFO.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/ForwardingUnit.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/HazardDetectionUnit.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/ID_EX.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/IF_ID.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/MEM_WB.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/MIPS2.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/Mux.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/Mux_4_1.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/PC.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/ProgramMemory.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/RegisterMemory.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/Shift16.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/TP4.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/Trunker.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/comparator.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/signExtension.v&quot; into library work</arg>
+</msg>
+
+</messages>
+

@@ -1,1 +1,0 @@
-vhdtdtfi -lang verilog -prj TP4 -o C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4/MEM_WB.tfi -lib work C:/Users/gaspa/Documents/win7VM/workspace/ArquitecturaDeComputadoras/TP4//MEM_WB.v -module MEM_WB -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
