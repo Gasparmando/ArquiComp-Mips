@@ -71,7 +71,10 @@ localparam
 			  AND = 6'b100100,	
 			  OR = 6'b100101,	
 			  XOR = 6'b100110,	
-			  SLT = 6'b101010;
+			  SLT = 6'b101010,
+			  SLL = 6'b000000,
+			  SRA = 6'b000011,
+			  SRL = 6'b000010;
 				
 			  
 
@@ -134,6 +137,60 @@ case(I_CU_OP)
 					O_CU_BranchNE=0;
 					O_CU_Jump = 1;
 					O_CU_LinkR =1;
+				end
+			
+			SLL:
+				begin
+					O_CU_MemtoReg=0;
+					O_CU_RegWrite=1;
+					O_CU_MemWrite=0;
+					O_CU_MemRead=0;
+					O_CU_BranchEQ=0;
+					O_CU_ALUSrc=1;
+					O_CU_RegDst=1;
+					O_CU_ALUControl=I_CU_FUNCT;	
+					O_CU_Trunk= 2'b00;
+					O_CU_signed = 0;
+					O_CU_shift = 0;
+					O_CU_BranchNE=0;
+					O_CU_Jump = 0;
+					O_CU_LinkR =0;
+				end
+				
+			SRL:
+				begin
+					O_CU_MemtoReg=0;
+					O_CU_RegWrite=1;
+					O_CU_MemWrite=0;
+					O_CU_MemRead=0;
+					O_CU_BranchEQ=0;
+					O_CU_ALUSrc=1;
+					O_CU_RegDst=1;
+					O_CU_ALUControl=I_CU_FUNCT;	
+					O_CU_Trunk= 2'b00;
+					O_CU_signed = 0;
+					O_CU_shift = 0;
+					O_CU_BranchNE=0;
+					O_CU_Jump = 0;
+					O_CU_LinkR =0;
+				end
+				
+			SRA:
+				begin
+					O_CU_MemtoReg=0;
+					O_CU_RegWrite=1;
+					O_CU_MemWrite=0;
+					O_CU_MemRead=0;
+					O_CU_BranchEQ=0;
+					O_CU_ALUSrc=1;
+					O_CU_RegDst=1;
+					O_CU_ALUControl=I_CU_FUNCT;	
+					O_CU_Trunk= 2'b00;
+					O_CU_signed = 0;
+					O_CU_shift = 0;
+					O_CU_BranchNE=0;
+					O_CU_Jump = 0;
+					O_CU_LinkR =0;
 				end
 				
 			default:

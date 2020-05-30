@@ -63,24 +63,12 @@ module ProgramMemory(input CLK,
     reg [31:0] data_list [31:0];
     reg [31:0] i;
     
-    always @(posedge CLK, posedge RESET)
+    always @(negedge CLK, posedge RESET)
     begin
         if (RESET)
         begin
             
-            /*Programa de prueba*/
-            data_list[0]       <= NOP;
-            data_list[1]       <= 32'b001000_00001_00001_0000000000001111; //ADDI  $(r1)        = $(r1)[0] + 15
-            data_list[2]       <= NOP;
-            data_list[3]       <= NOP;
-            data_list[4]       <= NOP;
-            data_list[5]       <= 32'b101011_00000_00001_0000000000001110; //SW  Mem(0+14)        = $(r2)
-            //					data_list[6] = 32'b000010_00000000000000000000000001; //J 1
-//            data_list[6]       <= 32'b000100_00000_00010_0000000001000000; //BEQ $(r0), $(r2), (128)
-            data_list[6]       <= 32'b100001_00000_00101_0000000000001110; //BEQ $(r0), $(r2), (128)
-            
-            
-            for(i = 7; i<= 31; i = i+1)
+            for(i = 0; i< 32; i = i+1)
             begin
                 data_list[i] <= NOP;
             end
@@ -88,21 +76,19 @@ module ProgramMemory(input CLK,
         end
         else
         begin
-            case({MEMREAD,MEMWRITE})
-                2'b01:		//WRITE
-                begin
-                    data_list[ADDR] <= WRITE_DATA;
-                    READ_DATA       <= WRITE_DATA;
-                end
-                2'b10:		//READ
-                begin
-                    READ_DATA <= data_list[ADDR];
-                end
-                default:
-                READ_DATA <= 0;
-            endcase
+				if(MEMWRITE)
+					begin
+						data_list[ADDR] <= WRITE_DATA;
+					end
         end
     end
+	 
+ always @(*)
+	begin
+      READ_DATA <= data_list[ADDR];
+	end
+	 
+	 
     
     assign O_REG_0  = data_list[0];
     assign O_REG_1  = data_list[1];

@@ -26,8 +26,8 @@ module RegisterMemory(
     input [4:0] I_REGMEM_RD,
     input [31:0] I_REGMEM_WRITE_DATA,
     input I_REGMEM_REGWR,
-    output reg [31:0] O_REGMEM_READ_DATA_1,
-    output reg [31:0] O_REGMEM_READ_DATA_2,
+    output reg [31:0] O_REGMEM_READ_DATA1,
+    output reg [31:0] O_REGMEM_READ_DATA2,
 	 output [31:0] O_REG_0,
 	 output [31:0] O_REG_1,
 	 output [31:0] O_REG_2,
@@ -82,10 +82,10 @@ module RegisterMemory(
 			end
 	end
 	
-	always @(I_REGMEM_RS, I_REGMEM_RT)
+	always @(*)
 	begin
-		O_REGMEM_READ_DATA_1<=REG[I_REGMEM_RS];
-		O_REGMEM_READ_DATA_2<=REG[I_REGMEM_RT];
+		O_REGMEM_READ_DATA1<=REG[I_REGMEM_RS];
+		O_REGMEM_READ_DATA2<=REG[I_REGMEM_RT];
 	end
 	
 assign O_REG_0 = REG[0];

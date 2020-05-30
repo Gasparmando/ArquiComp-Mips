@@ -8,16 +8,15 @@
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
          <ClosedNode>/TP4 C:|Users|gaspa|Documents|win7VM|workspace|ArquitecturaDeComputadoras|TP4_Final|MIPS|TP4.v/mips - MIPS2</ClosedNode>
-         <ClosedNode>PROJECT</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>FIFO (D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/FIFO.v)</SelectedItem>
+         <SelectedItem>Unassigned User Library Modules</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001a5000000020000000000000000000000000200000064ffffffff000000810000000300000002000001a50000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001b9000000020000000000000000000000000200000064ffffffff000000810000000300000002000001b90000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>FIFO (D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/FIFO.v)</CurrentItem>
+      <CurrentItem>Unassigned User Library Modules</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -25,24 +24,51 @@
          <ClosedNode>Design Utilities</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000e3000000010000000100000000000000000000000064ffffffff000000810000000000000001000000e30000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000016b000000010000000100000000000000000000000064ffffffff0000008100000000000000010000016b0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView guiview="File" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
-      <SelectedItems/>
+      <SelectedItems>
+         <SelectedItem>ALU.v</SelectedItem>
+         <SelectedItem>comparator.v</SelectedItem>
+         <SelectedItem>ControlUnit.v</SelectedItem>
+         <SelectedItem>DataMemory.v</SelectedItem>
+         <SelectedItem>data_file.bin</SelectedItem>
+         <SelectedItem>DebugUnit.v</SelectedItem>
+         <SelectedItem>EX_MEM.v</SelectedItem>
+         <SelectedItem>FIFO.v</SelectedItem>
+         <SelectedItem>ForwardingUnit.v</SelectedItem>
+         <SelectedItem>HazardDetectionUnit.v</SelectedItem>
+         <SelectedItem>ID_EX.v</SelectedItem>
+         <SelectedItem>IF_ID.v</SelectedItem>
+         <SelectedItem>MEM_WB.v</SelectedItem>
+         <SelectedItem>MIPS2.v</SelectedItem>
+         <SelectedItem>mips_test.v</SelectedItem>
+         <SelectedItem>Mux.v</SelectedItem>
+         <SelectedItem>Mux_4_1.v</SelectedItem>
+         <SelectedItem>PC.v</SelectedItem>
+         <SelectedItem>ProgramMemory.v</SelectedItem>
+         <SelectedItem>readfile_test.v</SelectedItem>
+         <SelectedItem>RegisterMemory.v</SelectedItem>
+         <SelectedItem>Shift16.v</SelectedItem>
+         <SelectedItem>signExtension.v</SelectedItem>
+         <SelectedItem>TP4.v</SelectedItem>
+         <SelectedItem>tp4_test.v</SelectedItem>
+         <SelectedItem>Trunker.v</SelectedItem>
+      </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000251000000040101000100000000000000000000000064ffffffff000000810000000000000004000000420000000100000000000000240000000100000000000000660000000100000000000001850000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000000000000001000000000000000000000000000000000000027c000000040101000100000000000000000000000064ffffffff000000810000000000000004000000420000000100000000000000240000000100000000000000660000000100000000000001b00000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>ALU.v</CurrentItem>
+      <CurrentItem>mips_test.v</CurrentItem>
    </ItemView>
    <ItemView guiview="Library" >
       <ClosedNodes>
@@ -69,7 +95,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000016b000000010000000100000000000000000000000064ffffffff0000008100000000000000010000016b0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f0000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f00000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>View HDL Instantiation Template</CurrentItem>
    </ItemView>
@@ -77,23 +103,24 @@
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
          <ClosedNode>/TP4 C:|Users|gaspa|Documents|win7VM|workspace|ArquitecturaDeComputadoras|TP4_Final|MIPS|TP4.v/mips - MIPS2</ClosedNode>
-         <ClosedNode>/readfile_test C:|Users|gaspa|Documents|win7VM|workspace|ArquitecturaDeComputadoras|TP4_Final|MIPS|readfile_test.v/uut - TP4</ClosedNode>
-         <ClosedNode>PROJECT</ClosedNode>
+         <ClosedNode>/mips_test D:|workspace|ArquitecturaDeComputadoras|TP4_Final|MIPS|mips_test.v</ClosedNode>
+         <ClosedNode>/readfile_test C:|Users|gaspa|Documents|win7VM|workspace|ArquitecturaDeComputadoras|TP4_Final|MIPS|readfile_test.v</ClosedNode>
+         <ClosedNode>/readfile_test C:|Users|gaspa|Documents|win7VM|workspace|ArquitecturaDeComputadoras|TP4_Final|MIPS|readfile_test.v/uut - TP4/mips - MIPS2</ClosedNode>
+         <ClosedNode>/readfile_test D:|workspace|ArquitecturaDeComputadoras|TP4_Final|MIPS|readfile_test.v</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>PM - ProgramMemory (D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/ProgramMemory.v)</SelectedItem>
+         <SelectedItem>adder - ALU (D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/ALU.v)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >9</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001b9000000020000000000000000000000000200000064ffffffff000000810000000300000002000001b90000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>PM - ProgramMemory (D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/ProgramMemory.v)</CurrentItem>
+      <CurrentItem>adder - ALU (D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/ALU.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
          <ClosedNode>Design Utilities/Compile HDL Simulation Libraries</ClosedNode>
-         <ClosedNode>ISim Simulator</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
          <SelectedItem></SelectedItem>
@@ -117,6 +144,33 @@
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem></CurrentItem>
    </ItemView>
-   <SourceProcessView>000000ff0000000000000002000000e30000006501000000050100000002</SourceProcessView>
+   <SourceProcessView>000000ff0000000000000002000000f50000007a01000000050100000002</SourceProcessView>
    <CurrentView>Behavioral Simulation</CurrentView>
+   <ItemView engineview="PostTransSim" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>PROJECT</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Unassigned User Library Modules</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000000f3000000020000000000000000000000000200000064ffffffff000000810000000300000002000000f30000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Unassigned User Library Modules</CurrentItem>
+   </ItemView>
+   <ItemView engineview="PostTransSim" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000101000000010000000100000000000000000000000064ffffffff000000810000000000000001000001010000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
 </Project>

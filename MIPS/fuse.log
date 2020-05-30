@@ -1,4 +1,4 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/readfile_test_isim_beh.exe -prj D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/readfile_test_beh.prj work.readfile_test work.glbl 
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/tp4_test_isim_beh.exe" -prj "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/tp4_test_beh.prj" "work.tp4_test" "work.glbl" 
 ISim P.20131013 (signature 0x8ef4fb42)
 Number of CPUs detected in this system: 2
 Turning on mult-threading, number of parallel sub-compilation jobs: 4 
@@ -23,40 +23,24 @@ Analyzing Verilog file "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/c
 Analyzing Verilog file "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/ALU.v" into library work
 Analyzing Verilog file "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/MIPS2.v" into library work
 Analyzing Verilog file "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/FIFO.v" into library work
-Analyzing Verilog file "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/DebugUnit.v" into library work
 Analyzing Verilog file "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/TP4.v" into library work
-WARNING:HDLCompiler:35 - "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/TP4.v" Line 558: <INSTRUCTION_OUT> is already implicitly declared earlier.
-WARNING:HDLCompiler:35 - "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/TP4.v" Line 559: <empty> is already implicitly declared earlier.
-WARNING:HDLCompiler:35 - "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/TP4.v" Line 560: <FLAG_O> is already implicitly declared earlier.
-Analyzing Verilog file "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/readfile_test.v" into library work
+Analyzing Verilog file "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/tp4_test.v" into library work
 Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
-WARNING:HDLCompiler:189 - "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/TP4.v" Line 282: Size mismatch in connection of port <I_EXE_CONTROL>. Formal port size is 20-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/TP4.v" Line 291: Size mismatch in connection of port <I_MEM_CONTROL>. Formal port size is 20-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/TP4.v" Line 295: Size mismatch in connection of port <I_MEM_REGDST>. Formal port size is 5-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/TP4.v" Line 297: Size mismatch in connection of port <I_WB_CONTROL>. Formal port size is 20-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/TP4.v" Line 302: Size mismatch in connection of port <I_WB_REGDST>. Formal port size is 5-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/TP4.v" Line 303: Size mismatch in connection of port <I_HZ_IFID_WRITE>. Formal port size is 1-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/TP4.v" Line 304: Size mismatch in connection of port <I_HZ_PC_WRITE>. Formal port size is 1-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/TP4.v" Line 305: Size mismatch in connection of port <I_HZ_ID_ControlMux>. Formal port size is 1-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/TP4.v" Line 306: Size mismatch in connection of port <I_FU_ForwardA>. Formal port size is 2-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/TP4.v" Line 307: Size mismatch in connection of port <I_FU_ForwardB>. Formal port size is 2-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/TP4.v" Line 404: Size mismatch in connection of port <I_ITERACIONES>. Formal port size is 32-bit while actual signal size is 1-bit.
-WARNING:HDLCompiler:1016 - "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/MIPS2.v" Line 323: Port OPCODE is not connected to this instance
-WARNING:HDLCompiler:189 - "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/TP4.v" Line 423: Size mismatch in connection of port <O_EXE_CONTROL>. Formal port size is 20-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/TP4.v" Line 432: Size mismatch in connection of port <O_MEM_CONTROL>. Formal port size is 20-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/TP4.v" Line 436: Size mismatch in connection of port <O_MEM_REGDST>. Formal port size is 5-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/TP4.v" Line 438: Size mismatch in connection of port <O_WB_CONTROL>. Formal port size is 20-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/TP4.v" Line 443: Size mismatch in connection of port <O_WB_REGDST>. Formal port size is 5-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/TP4.v" Line 444: Size mismatch in connection of port <O_HZ_IFID_WRITE>. Formal port size is 1-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/TP4.v" Line 445: Size mismatch in connection of port <O_HZ_PC_WRITE>. Formal port size is 1-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/TP4.v" Line 446: Size mismatch in connection of port <O_HZ_ID_ControlMux>. Formal port size is 1-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/TP4.v" Line 447: Size mismatch in connection of port <O_FU_ForwardA>. Formal port size is 2-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/TP4.v" Line 448: Size mismatch in connection of port <O_FU_ForwardB>. Formal port size is 2-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:1016 - "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/TP4.v" Line 276: Port O_IF_INSTR is not connected to this instance
+WARNING:HDLCompiler:189 - "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/TP4.v" Line 288: Size mismatch in connection of port <O_EXE_CONTROL>. Formal port size is 20-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/TP4.v" Line 297: Size mismatch in connection of port <O_MEM_CONTROL>. Formal port size is 20-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/TP4.v" Line 301: Size mismatch in connection of port <O_MEM_REGDST>. Formal port size is 5-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/TP4.v" Line 303: Size mismatch in connection of port <O_WB_CONTROL>. Formal port size is 20-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/TP4.v" Line 308: Size mismatch in connection of port <O_WB_REGDST>. Formal port size is 5-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/TP4.v" Line 309: Size mismatch in connection of port <O_HZ_IFID_WRITE>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/TP4.v" Line 310: Size mismatch in connection of port <O_HZ_PC_WRITE>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/TP4.v" Line 311: Size mismatch in connection of port <O_HZ_ID_ControlMux>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/TP4.v" Line 312: Size mismatch in connection of port <O_FU_ForwardA>. Formal port size is 2-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/TP4.v" Line 313: Size mismatch in connection of port <O_FU_ForwardB>. Formal port size is 2-bit while actual signal size is 32-bit.
 Completed static elaboration
-Fuse Memory Usage: 117240 KB
-Fuse CPU Usage: 452 ms
-Compiling module DebugUnit
+Fuse Memory Usage: 116856 KB
+Fuse CPU Usage: 483 ms
 Compiling module PC
 Compiling module ALU
 Compiling module Mux_2_1
@@ -80,11 +64,11 @@ Compiling module MEM_WB
 Compiling module MIPS2
 Compiling module FIFO
 Compiling module TP4
-Compiling module readfile_test
+Compiling module tp4_test
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 1 sub-compilation(s) to finish...
-Compiled 26 Verilog Units
-Built simulation executable D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/readfile_test_isim_beh.exe
-Fuse Memory Usage: 121832 KB
-Fuse CPU Usage: 890 ms
+Waiting for 2 sub-compilation(s) to finish...
+Compiled 25 Verilog Units
+Built simulation executable D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/tp4_test_isim_beh.exe
+Fuse Memory Usage: 121768 KB
+Fuse CPU Usage: 921 ms

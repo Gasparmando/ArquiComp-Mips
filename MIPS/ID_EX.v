@@ -23,8 +23,8 @@ module ID_EX(
     input RESET,
     input [19:0] I_IDEX_ControlReg,
     input [31:0] I_IDEX_PC,
-    input [31:0] I_IDEX_ReadData1,
-    input [31:0] I_IDEX_ReadData2,
+    input [31:0] I_IDEX_read_data1,
+    input [31:0] I_IDEX_read_data2,
     input [31:0] I_IDEX_SignExt_in,
 	 input [4:0]I_IDEX_RS,
     input [4:0]I_IDEX_RT,
@@ -33,8 +33,8 @@ module ID_EX(
 	 
 	 output reg [19:0] O_IDEX_ControlReg,
     output reg [31:0] O_IDEX_PC,
-    output reg [31:0] O_IDEX_ReadData1,
-    output reg [31:0] O_IDEX_ReadData2,
+    output reg [31:0] O_IDEX_read_data1,
+    output reg [31:0] O_IDEX_read_data2,
     output reg  [31:0] O_IDEX_SignExt,
 	 output reg [4:0]O_IDEX_RS,
     output reg [4:0] O_IDEX_RT,
@@ -48,8 +48,8 @@ module ID_EX(
 			begin
 				O_IDEX_ControlReg <= 0;
 				O_IDEX_PC <= 0;
-				O_IDEX_ReadData1 <= 0;
-				O_IDEX_ReadData2 <= 0;
+				O_IDEX_read_data1 <= 0;
+				O_IDEX_read_data2 <= 0;
 				O_IDEX_SignExt <= 0;
 				O_IDEX_RS <= 0;
 				O_IDEX_RT <= 0;
@@ -60,8 +60,8 @@ module ID_EX(
 			begin
 				O_IDEX_ControlReg <= I_IDEX_ControlReg;
 				O_IDEX_PC <= I_IDEX_PC;
-				O_IDEX_ReadData1 <= I_IDEX_ReadData1;
-				O_IDEX_ReadData2 <= I_IDEX_ReadData2;
+				O_IDEX_read_data1 <= I_IDEX_read_data1;
+				O_IDEX_read_data2 <= I_IDEX_read_data2;
 				O_IDEX_SignExt <= I_IDEX_SignExt_in;
 				O_IDEX_RS <= I_IDEX_RS;
 				O_IDEX_RT <=I_IDEX_RT;

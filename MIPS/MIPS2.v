@@ -21,11 +21,14 @@
 module MIPS2(
 	input CLK,
 	input RESET,
+	input ENABLE,
 	input I_MIPS_WrPM,
 	input [31:0] I_MIPS_WrDataPM,
 	input [31:0] I_MIPS_WrDataPMAddr,
 //////////////////////////////////////////////////////////////////////////////////
 	output reg O_MIPS_FINISHED,
+	
+	output [31:0] O_IF_INSTR,
 	output [31:0] O_PC, O_PC_NEXT,
    output [31:0] O_ID_PC,
    output [31:0] O_ID_INSTR,
@@ -176,8 +179,8 @@ wire [19:0] w_id_control_out;
 wire [31:0] w_id_pc_out;
 wire [31:0] w_id_shifted;
 wire w_id_igual;
-wire [31:0] w_exe_ReadData1;
-wire [31:0] w_exe_ReadData2;
+wire [31:0] w_exe_read_data1;
+wire [31:0] w_exe_read_data2;
 wire [31:0] w_exe_mux_out1;
 wire [31:0] w_exe_mux_out2;
 wire [31:0] w_exe_mux_out3;
@@ -220,7 +223,7 @@ wire w_id_flush;
 wire [31:0] w_pm_addr;
 //////////////////////////////////////////////////////////////////////////////////
 PC pc (	
-    .CLK(CLK), 
+    .CLK(CLK && ENABLE), 
     .RESET(RESET), 
     .PC_IN(w_pc_next), 
     .PC_CTRL(w_hz_pc_write), 
@@ -287,9 +290,11 @@ ProgramMemory PM (
     );
 //////////////////////////////////////////////////////////////////////////////////
 
+reg [31:0] R_ID_PC_OUT;
+
 Mux_2_1 pc_mux (
     .A(w_if_pc), 
-    .B(w_id_pc_out), 
+    .B(R_ID_PC_OUT), 
     .SEL(w_branch_out), 
     .OUT(w_pc_branch)
     );
@@ -306,7 +311,7 @@ Mux_2_1 final_pc_mux (
 //////////////////////////////////////////////////////////////////////////////////
 
 IF_ID if_id (
-    .CLK(CLK), 
+    .CLK(CLK && ENABLE), 
     .RESET(RESET), 
     .I_IFID_INSTRUCTION(w_if_instr), 
     .I_IFID_PC(w_if_pc), 
@@ -321,12 +326,13 @@ IF_ID if_id (
 
 
 HazardDetectionUnit hazard_detection (
-    .CLK(CLK), 
+    .CLK(CLK && ENABLE), 
     .RESET(RESET), 
     .I_HZ_ID_RS(w_id_instr[25:21]), 
     .I_HZ_ID_RT(w_id_instr[20:16]), 
     .I_HZ_EXE_RT(w_exe_rt), 
-    .I_HZ_EXE_MemRead(w_exe_control[3]), 
+    .I_HZ_EXE_MemRead(w_exe_control[3]),
+	 .I_OPCODE(w_id_instr[31:26]),
     .O_HZ_IFID_WRITE(w_hz_ifid_write), 
     .O_HZ_PC_WRITE(w_hz_pc_write), 
     .O_HZ_ID_ControlMux(w_hz_controlMux)
@@ -364,15 +370,15 @@ Mux_2_1 #(.N(20)) ctrlUnit_mux (
 //////////////////////////////////////////////////////////////////////////////////
 
 RegisterMemory register_memory (
-    .CLK(CLK), 
+    .CLK(CLK && ENABLE), 
     .RESET(RESET), 
     .I_REGMEM_RS(w_id_instr[25:21]), 
     .I_REGMEM_RT(w_id_instr[20:16]), 
     .I_REGMEM_RD(w_wb_regDst), 
     .I_REGMEM_WRITE_DATA(w_wb_write_data), 
     .I_REGMEM_REGWR(w_wb_control[1]), 
-    .O_REGMEM_READ_DATA_1(w_id_read_data1), 
-    .O_REGMEM_READ_DATA_2(w_id_read_data2),
+    .O_REGMEM_READ_DATA1(w_id_read_data1), 
+    .O_REGMEM_READ_DATA2(w_id_read_data2),
      .O_REG_0(O_RM_REG_0), 
      .O_REG_1(O_RM_REG_1), 
      .O_REG_2(O_RM_REG_2), 
@@ -441,12 +447,12 @@ Shift16 shift16 (
 //////////////////////////////////////////////////////////////////////////////////
 
 ID_EX id_ex (
-    .CLK(CLK), 
+    .CLK(CLK && ENABLE), 
     .RESET(RESET), 
     .I_IDEX_ControlReg(w_id_control_out), 
     .I_IDEX_PC(w_id_pc), 
-    .I_IDEX_ReadData1(w_id_read_data1), 
-    .I_IDEX_ReadData2(w_id_read_data2), 
+    .I_IDEX_read_data1(w_id_read_data1), 
+    .I_IDEX_read_data2(w_id_read_data2), 
     .I_IDEX_SignExt_in(w_id_signExt), 
     .I_IDEX_RS(w_id_instr[25:21]), 
     .I_IDEX_RT(w_id_instr[20:16]), 
@@ -454,8 +460,8 @@ ID_EX id_ex (
 	 .I_IDEX_SHIFT(w_id_shifted),
     .O_IDEX_ControlReg(w_exe_control), 
     .O_IDEX_PC(w_exe_pc), 
-    .O_IDEX_ReadData1(w_exe_ReadData1), 
-    .O_IDEX_ReadData2(w_exe_ReadData2), 
+    .O_IDEX_read_data1(w_exe_read_data1), 
+    .O_IDEX_read_data2(w_exe_read_data2), 
     .O_IDEX_SignExt(w_exe_signExt), 
     .O_IDEX_RS(w_exe_rs), 
     .O_IDEX_RT(w_exe_rt), 
@@ -466,7 +472,7 @@ ID_EX id_ex (
 //////////////////////////////////////////////////////////////////////////////////
 
 Mux_4_1 mux_alu_op1 (
-    .A(w_exe_ReadData1), 
+    .A(w_exe_read_data1), 
     .B(w_wb_write_data), 
     .C(w_mem_addr),
 	 .D(),
@@ -486,7 +492,7 @@ ALU alu_execute (
 //////////////////////////////////////////////////////////////////////////////////
 
 Mux_4_1 mux_alu_op2 (
-    .A(w_exe_ReadData2), 
+    .A(w_exe_read_data2), 
     .B(w_wb_write_data), 
     .C(w_mem_addr),
 	 .D(),
@@ -517,7 +523,7 @@ Mux_4_1 #(.N(5)) mux_RegDst (
 //////////////////////////////////////////////////////////////////////////////////
 
 ForwardingUnit FU (
-    .CLK(CLK), 
+    .CLK(CLK && ENABLE), 
     .RESET(RESET), 
     .I_FU_EXE_RS(w_exe_rs), 
     .I_FU_EXE_RT(w_exe_rt), 
@@ -532,18 +538,17 @@ ForwardingUnit FU (
 //////////////////////////////////////////////////////////////////////////////////
 
 EX_MEM ex_mem (
-    .CLK(CLK), 
+    .CLK(CLK && ENABLE), 
     .RESET(RESET), 
     .I_EXE_PC(w_exe_pc), 
     .I_EXE_ALU_result(w_exe_ALU_result), 
-   
-    .I_EXE_WriteData(w_exe_mux_out2), 
+    .I_EXE_write_data(w_exe_mux_out2), 
     .I_EXE_regDst(w_exe_mux_out4), 
     .I_EXE_ControlReg(w_exe_control),
 	 .I_EXE_SHIFT(w_exe_shifted),
     .O_EXE_PC_out(w_mem_pc_out), 
     .O_EXE_ALU_result(w_mem_addr), 
-    .O_EXE_WriteData(w_mem_write_data), 
+    .O_EXE_write_data(w_mem_write_data), 
     .O_EXE_regDst(w_mem_regDst), 
     .O_EXE_ControlReg(w_mem_control), 
 	 .O_EXE_SHIFT(w_mem_shifted)
@@ -552,7 +557,7 @@ EX_MEM ex_mem (
 //////////////////////////////////////////////////////////////////////////////////
 
 DataMemory data_memory (
-    .CLK(CLK), 
+    .CLK(CLK && ENABLE), 
     .RESET(RESET), 
     .MEMREAD(w_mem_control[3]), 
     .MEMWRITE(w_mem_control[2]), 
@@ -605,16 +610,16 @@ Trunker trk (
 //////////////////////////////////////////////////////////////////////////////////
 
 MEM_WB mem_wb (
-    .CLK(CLK), 
+    .CLK(CLK && ENABLE), 
     .RESET(RESET), 
     .I_MEMWB_Control(w_mem_control), 
-    .I_MEMWB_ReadData(w_mem_read_data_trunked), 
+    .I_MEMWB_read_data(w_mem_read_data_trunked), 
     .I_MEMWB_ADDR(w_mem_addr), 
     .I_MEMWB_RegDst(w_mem_regDst),
 	 .I_MEMWB_PC(w_mem_pc_out),
 	 .I_MEMWB_SHIFT(w_mem_shifted),
     .O_MEMWB_Control(w_wb_control), 
-    .O_MEMWB_ReadData(w_wb_readData), 
+    .O_MEMWB_read_data(w_wb_readData), 
     .O_MEMWB_ADDR(w_wb_addr), 
     .O_MEMWB_RegDst(w_wb_regDst),
 	 .O_MEMWB_SHIFT(w_wb_shifted),
@@ -650,8 +655,8 @@ assign w_branch_out = (w_and1 || w_and2 || w_id_control[18]);
    assign  O_ID_INSTR = w_id_instr;
    assign  O_EXE_CONTROL = w_exe_control;
    assign  O_EXE_PC = w_exe_pc;
-   assign  O_EXE_READ_DATA1 = w_exe_ReadData1;
-   assign  O_EXE_READ_DATA2 = w_exe_ReadData2;
+   assign  O_EXE_READ_DATA1 = w_exe_read_data1;
+   assign  O_EXE_READ_DATA2 = w_exe_read_data2;
    assign  O_EXE_SIGN_EXT = w_exe_signExt;
    assign  O_EXE_RS = w_exe_rs;
    assign  O_EXE_RT = w_exe_rt;
@@ -677,10 +682,15 @@ assign w_branch_out = (w_and1 || w_and2 || w_id_control[18]);
    assign  O_FU_ForwardA = w_exe_forwardA;
    assign  O_FU_ForwardB = w_exe_forwardB;
 	
+	assign O_IF_INSTR = w_if_instr;
+	
 	always @(posedge CLK, posedge RESET)
 		if(RESET)
 			begin
 				O_MIPS_FINISHED<=0;
 			end
+	
+	always @(negedge CLK)
+		R_ID_PC_OUT<=w_id_pc_out;
 
 endmodule

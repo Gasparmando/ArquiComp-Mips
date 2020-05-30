@@ -22,7 +22,7 @@ module MEM_WB(
 input CLK,
 input RESET,
 input [19:0] I_MEMWB_Control,
-input [31:0] I_MEMWB_ReadData,
+input [31:0] I_MEMWB_read_data,
 input [31:0] I_MEMWB_ADDR,
 input [4:0] I_MEMWB_RegDst,
 input [31:0] I_MEMWB_PC,
@@ -30,7 +30,7 @@ input [31:0] I_MEMWB_SHIFT,
 
 
 output reg [19:0] O_MEMWB_Control,
-output reg [31:0] O_MEMWB_ReadData,
+output reg [31:0] O_MEMWB_read_data,
 output reg [31:0] O_MEMWB_ADDR,
 output reg [4:0] O_MEMWB_RegDst,
 output reg [31:0] O_MEMWB_PC,
@@ -42,7 +42,7 @@ begin
 	if(RESET)
 	begin
 		O_MEMWB_Control<=0;
-		O_MEMWB_ReadData<=0;
+		O_MEMWB_read_data<=0;
 		O_MEMWB_ADDR<=0;
 		O_MEMWB_RegDst<=0;
 		O_MEMWB_PC<=0;
@@ -52,7 +52,7 @@ begin
 	else
 		begin
 			O_MEMWB_Control<=I_MEMWB_Control;
-			O_MEMWB_ReadData<=I_MEMWB_ReadData;
+			O_MEMWB_read_data<=I_MEMWB_read_data;
 			O_MEMWB_ADDR<=I_MEMWB_ADDR;
 			O_MEMWB_RegDst<=I_MEMWB_RegDst;
 			O_MEMWB_PC<=I_MEMWB_PC;

@@ -61,13 +61,13 @@ module DataMemory(
     );
 	 
 	 reg [31:0] data_list [31:0];
-	 reg [3:0] i;
+	 reg [6:0] i;
 	 
-	 always @(posedge CLK, posedge RESET)
+	 always @(negedge CLK, posedge RESET)
 	 begin
 		if(RESET)
 			begin
-				for(i=0; i<=10; i=i+1)
+				for(i=0; i<=32; i=i+1)
 					begin
 						data_list[i] <= 0;
 					end
@@ -76,21 +76,19 @@ module DataMemory(
 			end
 		else
 			begin
-				case({MEMREAD,MEMWRITE})
-					2'b01:		//WRITE
-						begin
-							data_list[ADDR] <= WRITE_DATA;
-							READ_DATA <= WRITE_DATA;
-						end
-					2'b10:		//READ
-						begin
-							READ_DATA <= data_list[ADDR];
-						end
-					default:
-						READ_DATA <= 0;
-				endcase
+				if(MEMWRITE)
+					begin
+						data_list[ADDR] <= WRITE_DATA;
+						READ_DATA <= WRITE_DATA;
+					end
 			end
 	 end
+	 
+	always @(*)
+	begin
+      READ_DATA <= data_list[ADDR];
+	end
+	 
 
  assign O_REG_0 = data_list[0];
  assign O_REG_1 = data_list[1];
