@@ -5,6 +5,9 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="HDLCompiler" num="35" delta="unknown" >"D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/MIPS2.v" Line 426: &lt;<arg fmt="%s" index="1">w_id_jump_addr</arg>&gt; is already implicitly declared earlier.
+</msg>
+
 <msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/TP4.v" Line 276: Port <arg fmt="%s" index="1">O_IF_INSTR</arg> is not connected to this instance
 </msg>
 
@@ -36,6 +39,21 @@
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/TP4.v" Line 313: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">O_FU_ForwardB</arg>&gt;. Formal port size is <arg fmt="%d" index="2">2</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/MIPS2.v" Line 365: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">A</arg>&gt;. Formal port size is <arg fmt="%d" index="2">20</arg>-bit while actual signal size is <arg fmt="%d" index="1">21</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/MIPS2.v" Line 366: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">B</arg>&gt;. Formal port size is <arg fmt="%d" index="2">20</arg>-bit while actual signal size is <arg fmt="%d" index="1">21</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/MIPS2.v" Line 368: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">OUT</arg>&gt;. Formal port size is <arg fmt="%d" index="2">20</arg>-bit while actual signal size is <arg fmt="%d" index="1">21</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/MIPS2.v" Line 431: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">SEL</arg>&gt;. Formal port size is <arg fmt="%d" index="2">1</arg>-bit while actual signal size is <arg fmt="%d" index="1">21</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"D:/workspace/ArquitecturaDeComputadoras/TP4_Final/MIPS/MIPS2.v" Line 462: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">I_IDEX_ControlReg</arg>&gt;. Formal port size is <arg fmt="%d" index="2">20</arg>-bit while actual signal size is <arg fmt="%d" index="1">21</arg>-bit.
 </msg>
 
 </messages>

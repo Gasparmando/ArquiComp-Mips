@@ -34,7 +34,8 @@ module ControlUnit(
 	output reg O_CU_shift,
 	output reg O_CU_BranchNE,
 	output reg O_CU_Jump,
-	output reg O_CU_LinkR
+	output reg O_CU_LinkR,
+	output reg O_CU_R
    );
 	
 	
@@ -98,6 +99,7 @@ case(I_CU_OP)
 					O_CU_BranchNE=0;
 					O_CU_Jump = 0;
 					O_CU_LinkR =0;
+					O_CU_R =0;
 		end
 
 	TIPOR:
@@ -119,6 +121,7 @@ case(I_CU_OP)
 					O_CU_BranchNE=0;
 					O_CU_Jump = 1;
 					O_CU_LinkR =0;
+					O_CU_R =1;
 				end
 				
 			JALR:
@@ -137,6 +140,7 @@ case(I_CU_OP)
 					O_CU_BranchNE=0;
 					O_CU_Jump = 1;
 					O_CU_LinkR =1;
+					O_CU_R =1;
 				end
 			
 			SLL:
@@ -155,6 +159,7 @@ case(I_CU_OP)
 					O_CU_BranchNE=0;
 					O_CU_Jump = 0;
 					O_CU_LinkR =0;
+					O_CU_R =0;
 				end
 				
 			SRL:
@@ -173,6 +178,7 @@ case(I_CU_OP)
 					O_CU_BranchNE=0;
 					O_CU_Jump = 0;
 					O_CU_LinkR =0;
+					O_CU_R =0;
 				end
 				
 			SRA:
@@ -191,6 +197,7 @@ case(I_CU_OP)
 					O_CU_BranchNE=0;
 					O_CU_Jump = 0;
 					O_CU_LinkR =0;
+					O_CU_R =0;
 				end
 				
 			default:
@@ -209,6 +216,7 @@ case(I_CU_OP)
 					O_CU_BranchNE=0;
 					O_CU_Jump = 0;
 					O_CU_LinkR =0;
+					O_CU_R =0;
 				end
 				endcase
 			
@@ -229,6 +237,7 @@ case(I_CU_OP)
 					O_CU_BranchNE=0;
 					O_CU_Jump = 0;
 					O_CU_LinkR =0;
+					O_CU_R =0;
 		end
 
 	ANDI:
@@ -247,6 +256,7 @@ case(I_CU_OP)
 					O_CU_BranchNE=0;
 					O_CU_Jump = 0;
 					O_CU_LinkR =0;
+					O_CU_R =0;
 		end 
 	BEQ:
 		begin
@@ -264,6 +274,7 @@ case(I_CU_OP)
 					O_CU_BranchNE=0;
 					O_CU_Jump = 0;
 					O_CU_LinkR =0;
+					O_CU_R =0;
 		end  
 	BNE:
 		begin
@@ -281,6 +292,7 @@ case(I_CU_OP)
 					O_CU_BranchNE=1;
 					O_CU_Jump = 0;
 					O_CU_LinkR =0;
+					O_CU_R =0;
 		end
 
 	J:
@@ -299,6 +311,7 @@ case(I_CU_OP)
 					O_CU_BranchNE=0;
 					O_CU_Jump = 1;
 					O_CU_LinkR =0;
+					O_CU_R =0;
 				end
 	JAL:
 				begin
@@ -316,6 +329,7 @@ case(I_CU_OP)
 					O_CU_BranchNE=0;
 					O_CU_Jump = 1;
 					O_CU_LinkR =1;
+					O_CU_R =0;
 				end
 	LB:
 		begin
@@ -333,6 +347,7 @@ case(I_CU_OP)
 					O_CU_BranchNE=0;
 					O_CU_Jump = 0;
 					O_CU_LinkR =0;
+					O_CU_R =0;
 		end  
 	LBU:
 		begin
@@ -350,6 +365,7 @@ case(I_CU_OP)
 					O_CU_BranchNE=0;
 					O_CU_Jump = 0;
 					O_CU_LinkR =0;
+					O_CU_R =0;
 
 		end 
 	LH:
@@ -368,6 +384,7 @@ case(I_CU_OP)
 					O_CU_BranchNE=0;
 					O_CU_Jump = 0;
 					O_CU_LinkR =0;
+					O_CU_R =0;
 		end 
 	LHU:
 		begin
@@ -385,6 +402,7 @@ case(I_CU_OP)
 					O_CU_BranchNE=0;
 					O_CU_Jump = 0;
 					O_CU_LinkR =0;
+					O_CU_R =0;
 		end 
 	LUI:
 		begin
@@ -402,6 +420,7 @@ case(I_CU_OP)
 					O_CU_BranchNE=0;
 					O_CU_Jump = 0;
 					O_CU_LinkR =0;
+					O_CU_R =0;
 		end 
 	LW:
 		begin
@@ -419,6 +438,7 @@ case(I_CU_OP)
 					O_CU_BranchNE=0;
 					O_CU_Jump = 0;
 					O_CU_LinkR =0;
+					O_CU_R =0;
 		end 
 	LWU:
 		begin
@@ -436,6 +456,7 @@ case(I_CU_OP)
 					O_CU_BranchNE=0;
 					O_CU_Jump = 0;
 					O_CU_LinkR =0;
+					O_CU_R =0;
 		end 
 	ORI:
 		begin
@@ -453,6 +474,7 @@ case(I_CU_OP)
 					O_CU_BranchNE=0;
 					O_CU_Jump = 0;
 					O_CU_LinkR =0;
+					O_CU_R =0;
 			
 		end 
 	SB:
@@ -471,6 +493,7 @@ case(I_CU_OP)
 					O_CU_BranchNE=0;
 					O_CU_Jump = 0;
 					O_CU_LinkR =0;
+					O_CU_R =0;
 		end 
 	SH:
 		begin
@@ -488,6 +511,7 @@ case(I_CU_OP)
 					O_CU_BranchNE=0;
 					O_CU_Jump = 0;
 					O_CU_LinkR =0;
+					O_CU_R =0;
 		end
 	SLTI:
 		begin
@@ -505,6 +529,7 @@ case(I_CU_OP)
 					O_CU_BranchNE=0;
 					O_CU_Jump = 0;
 					O_CU_LinkR =0;
+					O_CU_R =0;
 		end  
  
 	SW:
@@ -523,6 +548,7 @@ case(I_CU_OP)
 					O_CU_BranchNE=0;
 					O_CU_Jump = 0;
 					O_CU_LinkR =0;
+					O_CU_R =0;
 		end
 	XORI:
 		begin
@@ -540,6 +566,7 @@ case(I_CU_OP)
 					O_CU_BranchNE=0;
 					O_CU_Jump = 0;
 					O_CU_LinkR =0;
+					O_CU_R =0;
 		end
 	HALT:
 		begin
@@ -557,6 +584,7 @@ case(I_CU_OP)
 					O_CU_BranchNE=0;
 					O_CU_Jump = 0;
 					O_CU_LinkR =0;
+					O_CU_R =0;
 		end
 	default:
 		begin
@@ -574,6 +602,7 @@ case(I_CU_OP)
 					O_CU_BranchNE=0;
 					O_CU_Jump = 0;
 					O_CU_LinkR =0;
+					O_CU_R =0;
 		end
 endcase	
 end		

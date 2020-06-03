@@ -171,11 +171,11 @@ wire [31:0] w_if_instr;
 wire [31:0] w_pc_branch;
 wire [31:0] w_pc_next;
 wire [31:0] w_id_instr;
-wire [19:0] w_id_control;
+wire [20:0] w_id_control;
 wire [31:0] w_id_read_data1;
 wire [31:0] w_id_read_data2;
 wire [31:0] w_id_signExt;
-wire [19:0] w_id_control_out;
+wire [20:0] w_id_control_out;
 wire [31:0] w_id_pc_out;
 wire [31:0] w_id_shifted;
 wire w_id_igual;
@@ -303,7 +303,7 @@ Mux_2_1 pc_mux (
 
 Mux_2_1 final_pc_mux (
     .A(w_pc_branch), 
-    .B(w_id_signExt), 
+    .B(w_id_jump_addr), 
     .SEL(w_id_control[18]), 
     .OUT(w_pc_next)
     );
@@ -355,14 +355,15 @@ ControlUnit CU (
     .O_CU_shift(w_id_control[16]), 
     .O_CU_BranchNE(w_id_control[17]), 
     .O_CU_Jump(w_id_control[18]), 
-    .O_CU_LinkR(w_id_control[19])
+    .O_CU_LinkR(w_id_control[19]),
+	 .O_CU_R(w_id_control[20])
     );
 
 //////////////////////////////////////////////////////////////////////////////////
 
 Mux_2_1 #(.N(20)) ctrlUnit_mux (
     .A(w_id_control), 
-    .B(20'b00000000000000000000), 
+    .B(21'b000000000000000000000), 
     .SEL(w_hz_controlMux), 
     .OUT(w_id_control_out)
     );
@@ -421,6 +422,15 @@ comparator comp (
     .O_COM_IGUAL(w_id_igual)
     );
 
+//////////////////////////////////////////////////////////////////////////////////
+wire [31:0] w_id_jump_addr;
+
+Mux_2_1 mux_Jump_addr (
+    .A(w_id_signExt), 
+    .B(w_id_read_data1), 
+    .SEL( w_id_control), 
+    .OUT(w_id_jump_addr)
+    );
 //////////////////////////////////////////////////////////////////////////////////
 
 signExtension signExt (

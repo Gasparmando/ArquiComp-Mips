@@ -22,6 +22,7 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="MIPS.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="ALU_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_VERILOG_INSTTEMPLATE" xil_pn:name="FIFO.tfi"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="HazardDetectionUnit_stx_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="ID_EX_isim_beh.exe"/>
@@ -82,7 +83,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1590846221" xil_pn:in_ck="-643409244195115933" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1590846221">
+    <transform xil_pn:end_ts="1591220276" xil_pn:in_ck="-643409244195115933" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1591220276">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ALU.v"/>
@@ -111,11 +112,11 @@
       <outfile xil_pn:name="signExtension.v"/>
       <outfile xil_pn:name="tp4_test.v"/>
     </transform>
-    <transform xil_pn:end_ts="1590798917" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="5264909802843784622" xil_pn:start_ts="1590798917">
+    <transform xil_pn:end_ts="1591220309" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="5264909802843784622" xil_pn:start_ts="1591220309">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1590798917" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="1502846022924190924" xil_pn:start_ts="1590798917">
+    <transform xil_pn:end_ts="1591220309" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="1502846022924190924" xil_pn:start_ts="1591220309">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -123,7 +124,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1590846222" xil_pn:in_ck="-643409244195115933" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1590846221">
+    <transform xil_pn:end_ts="1591220276" xil_pn:in_ck="-643409244195115933" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1591220276">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ALU.v"/>
@@ -152,7 +153,7 @@
       <outfile xil_pn:name="signExtension.v"/>
       <outfile xil_pn:name="tp4_test.v"/>
     </transform>
-    <transform xil_pn:end_ts="1590846228" xil_pn:in_ck="-643409244195115933" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-2661357764153009845" xil_pn:start_ts="1590846222">
+    <transform xil_pn:end_ts="1591226130" xil_pn:in_ck="-643409244195115933" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-2661357764153009845" xil_pn:start_ts="1591226124">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -164,7 +165,7 @@
       <outfile xil_pn:name="tp4_test_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1590846228" xil_pn:in_ck="-3858940720300313952" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-2674205726334134866" xil_pn:start_ts="1590846228">
+    <transform xil_pn:end_ts="1591226130" xil_pn:in_ck="-1297831197191213647" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-2674205726334134866" xil_pn:start_ts="1591226130">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="isim.cmd"/>
