@@ -203,6 +203,7 @@ wire [31:0] w_mem_read_data;
 wire [4:0] w_mem_regDst;
 wire [31:0] w_mem_pc_out;
 wire [31:0] w_mem_shifted;
+wire [31:0] w_mem_write_data_trunked;
 wire [31:0] w_mem_read_data_trunked;
 wire w_branch_out;
 wire [19:0] w_wb_control;
@@ -572,7 +573,7 @@ DataMemory data_memory (
     .MEMREAD(w_mem_control[3]), 
     .MEMWRITE(w_mem_control[2]), 
     .ADDR(w_mem_addr), 
-    .WRITE_DATA(w_mem_write_data), 
+    .WRITE_DATA(w_mem_write_data_trunked), 
     .READ_DATA(w_mem_read_data), 
      .O_REG_0(O_DM_REG_0), 
      .O_REG_1(O_DM_REG_1), 
@@ -610,7 +611,17 @@ DataMemory data_memory (
 
 //////////////////////////////////////////////////////////////////////////////////
 
-Trunker trk (
+
+Trunker trk_in (
+    .I_TRK_Data(w_mem_write_data), 
+    .I_TRK_size(w_mem_control[14:13]), 
+    .I_TRK_sign(w_mem_control[15]), 
+    .O_TRK_result(w_mem_write_data_trunked)
+    );
+	 
+//////////////////////////////////////////////////////////////////////////////////
+
+Trunker trk_out (
     .I_TRK_Data(w_mem_read_data), 
     .I_TRK_size(w_mem_control[14:13]), 
     .I_TRK_sign(w_mem_control[15]), 

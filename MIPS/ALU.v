@@ -39,8 +39,8 @@ localparam
 			  SRA = 6'b000011,
 			  SRL = 6'b000010,
 			  SLLV = 6'b000100,
-			  SRAV = 6'b000111,
-			  SRLV = 6'b000110;
+			  SRLV = 6'b000110,
+			  SRAV = 6'b000111;
 	
 	assign result = (O==ADDU) ? A+B : 	//ADD
 						 (O==SUBU) ? A-B :	//SUB
@@ -54,7 +54,7 @@ localparam
 						 (O==SRA) ? {$signed(A)>>>B[10:6]} :	//SRA
 						 (O==SLLV) ? A<<B[4:0] :		//SLLV
 						 (O==SRLV) ? A>>B[4:0] :		//SRLV
-						 (O==SRAV) ? A>>>B[4:0] :	//SRAV
+						 (O==SRAV) ? {$signed(A)>>>B[4:0]} :	//SRAV
 						 32'b11111111111111111111111111111111 ;
 						 
 	//assign zero = (result==0) ? 1'b1 : 1'b0;

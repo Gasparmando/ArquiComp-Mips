@@ -34,16 +34,16 @@ output reg [1:0] O_FU_ForwardB
 	 
 	 always @(*)
 	 begin
-		if (I_FU_WB_RegWrite && (I_FU_EXE_RS==I_FU_WB_regDst) && (I_FU_WB_regDst!=0) && (I_FU_EXE_RS!=I_FU_MEM_regDst) )
+		if (I_FU_WB_RegWrite==1 && (I_FU_WB_regDst!=0) && (I_FU_EXE_RS!=I_FU_MEM_regDst || I_FU_MEM_RegWrite==0 ) && I_FU_EXE_RS==I_FU_WB_regDst )   
 			O_FU_ForwardA = 2'b01;
-		else if(I_FU_MEM_RegWrite && (I_FU_EXE_RS==I_FU_MEM_regDst) && (I_FU_MEM_regDst!=0) )
+		else if(I_FU_MEM_RegWrite==1 && (I_FU_EXE_RS==I_FU_MEM_regDst) && (I_FU_MEM_regDst!=0) )
 			O_FU_ForwardA = 2'b10;
 		else
 			O_FU_ForwardA = 2'b00;
 		
-		if (I_FU_WB_RegWrite && (I_FU_EXE_RT==I_FU_WB_regDst) && (I_FU_WB_regDst!=0) && (I_FU_EXE_RT!=I_FU_MEM_regDst) )
+		if (I_FU_WB_RegWrite==1 && (I_FU_WB_regDst!=0) && (I_FU_EXE_RT!=I_FU_MEM_regDst || I_FU_MEM_RegWrite==0 ) && I_FU_EXE_RT==I_FU_WB_regDst ) 
 			O_FU_ForwardB = 2'b01;
-		else if(I_FU_MEM_RegWrite && (I_FU_EXE_RT==I_FU_MEM_regDst) && (I_FU_MEM_regDst!=0) )
+		else if(I_FU_MEM_RegWrite==1 && (I_FU_EXE_RT==I_FU_MEM_regDst) && (I_FU_MEM_regDst!=0) )
 			O_FU_ForwardB = 2'b10;
 		else
 			O_FU_ForwardB = 2'b00;

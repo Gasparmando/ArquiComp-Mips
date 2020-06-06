@@ -2,9 +2,9 @@ Command line:
    tp4_test_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  49179
+     -socket  49175
 
-Wed Jun 03 16:53:31 2020
+Sat Jun 06 06:57:26 2020
 
 
- Elaboration Time: 0.09375 sec
+ Elaboration Time: 0.15625 sec
