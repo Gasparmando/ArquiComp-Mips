@@ -222,12 +222,16 @@ wire w_hz_controlMux;
 wire w_id_flush;
 
 wire [31:0] w_pm_addr;
+
+localparam HALT = 6'b010101;
+reg R_HALT;
 //////////////////////////////////////////////////////////////////////////////////
 PC pc (	
-    .CLK(CLK && ENABLE), 
+    .CLK(CLK), 
     .RESET(RESET), 
+	 .ENABLE(ENABLE),
     .PC_IN(w_pc_next), 
-    .PC_CTRL(w_hz_pc_write), 
+    .PC_CTRL(w_hz_pc_write && R_HALT), 
     .PC_OUT(w_pc)
     );
 //////////////////////////////////////////////////////////////////////////////////
@@ -289,13 +293,15 @@ ProgramMemory PM (
     .O_REG_30(O_PM_REG_30), 
     .O_REG_31(O_PM_REG_31)
     );
+	 
+	 
 //////////////////////////////////////////////////////////////////////////////////
 
 reg [31:0] R_ID_PC_OUT;
 
 Mux_2_1 pc_mux (
     .A(w_if_pc), 
-    .B(R_ID_PC_OUT), 
+    .B(w_id_pc_out), 
     .SEL(w_branch_out), 
     .OUT(w_pc_branch)
     );
@@ -312,11 +318,12 @@ Mux_2_1 final_pc_mux (
 //////////////////////////////////////////////////////////////////////////////////
 
 IF_ID if_id (
-    .CLK(CLK && ENABLE), 
+    .CLK(CLK), 
+	 .ENABLE(ENABLE),
     .RESET(RESET), 
     .I_IFID_INSTRUCTION(w_if_instr), 
     .I_IFID_PC(w_if_pc), 
-    .I_IFID_WRITE(w_hz_ifid_write), 
+    .I_IFID_WRITE(w_hz_ifid_write && R_HALT), 
     .I_IFID_FLUSH(w_branch_out), 
     .O_IFID_INSTRUCTION(w_id_instr), 
     .O_IFID_PC(w_id_pc)
@@ -327,8 +334,6 @@ IF_ID if_id (
 
 
 HazardDetectionUnit hazard_detection (
-    .CLK(CLK && ENABLE), 
-    .RESET(RESET), 
     .I_HZ_ID_RS(w_id_instr[25:21]), 
     .I_HZ_ID_RT(w_id_instr[20:16]), 
     .I_HZ_EXE_RT(w_exe_rt), 
@@ -372,8 +377,9 @@ Mux_2_1 #(.N(20)) ctrlUnit_mux (
 //////////////////////////////////////////////////////////////////////////////////
 
 RegisterMemory register_memory (
-    .CLK(CLK && ENABLE), 
+    .CLK(CLK), 
     .RESET(RESET), 
+	 .ENABLE(ENABLE),
     .I_REGMEM_RS(w_id_instr[25:21]), 
     .I_REGMEM_RT(w_id_instr[20:16]), 
     .I_REGMEM_RD(w_wb_regDst), 
@@ -458,8 +464,9 @@ Shift16 shift16 (
 //////////////////////////////////////////////////////////////////////////////////
 
 ID_EX id_ex (
-    .CLK(CLK && ENABLE), 
+    .CLK(CLK), 
     .RESET(RESET), 
+	 .ENABLE(ENABLE),
     .I_IDEX_ControlReg(w_id_control_out), 
     .I_IDEX_PC(w_id_pc), 
     .I_IDEX_read_data1(w_id_read_data1), 
@@ -534,8 +541,6 @@ Mux_4_1 #(.N(5)) mux_RegDst (
 //////////////////////////////////////////////////////////////////////////////////
 
 ForwardingUnit FU (
-    .CLK(CLK && ENABLE), 
-    .RESET(RESET), 
     .I_FU_EXE_RS(w_exe_rs), 
     .I_FU_EXE_RT(w_exe_rt), 
     .I_FU_MEM_regDst(w_mem_regDst), 
@@ -549,8 +554,9 @@ ForwardingUnit FU (
 //////////////////////////////////////////////////////////////////////////////////
 
 EX_MEM ex_mem (
-    .CLK(CLK && ENABLE), 
+    .CLK(CLK), 
     .RESET(RESET), 
+	 .ENABLE(ENABLE),
     .I_EXE_PC(w_exe_pc), 
     .I_EXE_ALU_result(w_exe_ALU_result), 
     .I_EXE_write_data(w_exe_mux_out2), 
@@ -568,8 +574,9 @@ EX_MEM ex_mem (
 //////////////////////////////////////////////////////////////////////////////////
 
 DataMemory data_memory (
-    .CLK(CLK && ENABLE), 
+    .CLK(CLK), 
     .RESET(RESET), 
+	 .ENABLE(ENABLE),
     .MEMREAD(w_mem_control[3]), 
     .MEMWRITE(w_mem_control[2]), 
     .ADDR(w_mem_addr), 
@@ -631,8 +638,9 @@ Trunker trk_out (
 //////////////////////////////////////////////////////////////////////////////////
 
 MEM_WB mem_wb (
-    .CLK(CLK && ENABLE), 
+    .CLK(CLK), 
     .RESET(RESET), 
+	 .ENABLE(ENABLE),
     .I_MEMWB_Control(w_mem_control), 
     .I_MEMWB_read_data(w_mem_read_data_trunked), 
     .I_MEMWB_ADDR(w_mem_addr), 
@@ -705,13 +713,23 @@ assign w_branch_out = (w_and1 || w_and2 || w_id_control[18]);
 	
 	assign O_IF_INSTR = w_if_instr;
 	
-	always @(posedge CLK, posedge RESET)
-		if(RESET)
+//	always @(posedge CLK, posedge RESET)
+//		if(RESET)
+//			begin
+//				R_HALT = 1;
+//			end
+
+
+
+
+	always @(*)
 			begin
-				O_MIPS_FINISHED<=0;
+				if (w_if_instr[31:26] == HALT)
+					begin
+						R_HALT = 0;
+					end
+				else
+						R_HALT = 1;
 			end
-	
-	always @(negedge CLK)
-		R_ID_PC_OUT<=w_id_pc_out;
 
 endmodule

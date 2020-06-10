@@ -19,8 +19,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module HazardDetectionUnit(
-input CLK,
-input RESET,
+
 input [4:0] I_HZ_ID_RS,
 input [4:0] I_HZ_ID_RT,
 input [4:0] I_HZ_EXE_RT,
@@ -38,9 +37,13 @@ localparam HALT = 6'b010101;
 
 always @(*)
 	begin
-		if(I_OPCODE == HALT)
-				O_HZ_IFID_WRITE=0;
-		else
+//		if(I_OPCODE == HALT)
+//			begin
+//				O_HZ_IFID_WRITE=0;
+//				O_HZ_PC_WRITE = 0;
+//			end
+//		else
+
 			begin
 	
 				if(I_HZ_EXE_MemRead && ( (I_HZ_EXE_RT==I_HZ_ID_RS)  ||  (I_HZ_EXE_RT==I_HZ_ID_RT) ))
@@ -58,7 +61,9 @@ always @(*)
 					end
 			
 			end
-	end
+			
+		end
+
 	
 
 

@@ -21,6 +21,7 @@
 module DataMemory(
 			input CLK,
 			input RESET,
+			input ENABLE,
 			input MEMREAD,
 			input MEMWRITE,
 			input [31:0] ADDR,
@@ -74,7 +75,7 @@ module DataMemory(
 					
 				READ_DATA <= 0;
 			end
-		else
+		else if (ENABLE)
 			begin
 				if(MEMWRITE)
 					begin

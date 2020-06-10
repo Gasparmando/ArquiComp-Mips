@@ -23,6 +23,7 @@
 module PC(
     input CLK, input RESET,
 	 input [31:0] PC_IN,
+	 input ENABLE,
 	 input PC_CTRL,
     output wire [31:0] PC_OUT
     );
@@ -35,7 +36,7 @@ module PC(
 			if(RESET)
 				pc=0;
 			else
-				if(PC_CTRL)
+				if(PC_CTRL && ENABLE)
 					pc=PC_IN;
 					//Probar que ande cuando ctrl es 0 
     end

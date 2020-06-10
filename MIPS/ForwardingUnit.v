@@ -19,8 +19,6 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module ForwardingUnit(
-input CLK,
-input RESET,
 input [4:0] I_FU_EXE_RS,
 input [4:0] I_FU_EXE_RT,
 input [4:0] I_FU_MEM_regDst,

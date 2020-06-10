@@ -21,6 +21,7 @@
 module MEM_WB(
 input CLK,
 input RESET,
+input ENABLE,
 input [19:0] I_MEMWB_Control,
 input [31:0] I_MEMWB_read_data,
 input [31:0] I_MEMWB_ADDR,
@@ -49,7 +50,7 @@ begin
 		O_MEMWB_SHIFT<=0;
 		
 	end
-	else
+	else if(ENABLE)
 		begin
 			O_MEMWB_Control<=I_MEMWB_Control;
 			O_MEMWB_read_data<=I_MEMWB_read_data;

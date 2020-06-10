@@ -43,8 +43,8 @@
       <obj_property name="CustomSignalColor">#800000</obj_property>
    </wvobject>
    <wvobject fp_name="/tp4_test/W_EXE_CONTROL" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">W_EXE_CONTROL[31:0]</obj_property>
-      <obj_property name="ObjectShortName">W_EXE_CONTROL[31:0]</obj_property>
+      <obj_property name="ElementShortName">W_EXE_CONTROL[20:0]</obj_property>
+      <obj_property name="ObjectShortName">W_EXE_CONTROL[20:0]</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="CustomSignalColor">#800080</obj_property>
    </wvobject>
@@ -102,8 +102,8 @@
       <obj_property name="CustomSignalColor">#800080</obj_property>
    </wvobject>
    <wvobject fp_name="/tp4_test/W_MEM_CONTROL" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">W_MEM_CONTROL[31:0]</obj_property>
-      <obj_property name="ObjectShortName">W_MEM_CONTROL[31:0]</obj_property>
+      <obj_property name="ElementShortName">W_MEM_CONTROL[20:0]</obj_property>
+      <obj_property name="ObjectShortName">W_MEM_CONTROL[20:0]</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="CustomSignalColor">#00ffff</obj_property>
    </wvobject>
@@ -128,8 +128,8 @@
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/tp4_test/W_MEM_REGDST" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">W_MEM_REGDST[31:0]</obj_property>
-      <obj_property name="ObjectShortName">W_MEM_REGDST[31:0]</obj_property>
+      <obj_property name="ElementShortName">W_MEM_REGDST[4:0]</obj_property>
+      <obj_property name="ObjectShortName">W_MEM_REGDST[4:0]</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="CustomSignalColor">#00ffff</obj_property>
    </wvobject>
@@ -140,8 +140,8 @@
       <obj_property name="CustomSignalColor">#00ffff</obj_property>
    </wvobject>
    <wvobject fp_name="/tp4_test/W_WB_CONTROL" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">W_WB_CONTROL[31:0]</obj_property>
-      <obj_property name="ObjectShortName">W_WB_CONTROL[31:0]</obj_property>
+      <obj_property name="ElementShortName">W_WB_CONTROL[20:0]</obj_property>
+      <obj_property name="ObjectShortName">W_WB_CONTROL[20:0]</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="CustomSignalColor">#ff0000</obj_property>
    </wvobject>
@@ -171,32 +171,32 @@
       <obj_property name="CustomSignalColor">#ff0000</obj_property>
    </wvobject>
    <wvobject fp_name="/tp4_test/W_WB_REGDST" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">W_WB_REGDST[31:0]</obj_property>
-      <obj_property name="ObjectShortName">W_WB_REGDST[31:0]</obj_property>
+      <obj_property name="ElementShortName">W_WB_REGDST[4:0]</obj_property>
+      <obj_property name="ObjectShortName">W_WB_REGDST[4:0]</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="CustomSignalColor">#ff0000</obj_property>
    </wvobject>
-   <wvobject fp_name="/tp4_test/W_HZ_IFID_WRITE" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">W_HZ_IFID_WRITE[31:0]</obj_property>
-      <obj_property name="ObjectShortName">W_HZ_IFID_WRITE[31:0]</obj_property>
+   <wvobject fp_name="/tp4_test/W_HZ_IFID_WRITE" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">W_HZ_IFID_WRITE</obj_property>
+      <obj_property name="ObjectShortName">W_HZ_IFID_WRITE</obj_property>
    </wvobject>
-   <wvobject fp_name="/tp4_test/W_HZ_PC_WRITE" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">W_HZ_PC_WRITE[31:0]</obj_property>
-      <obj_property name="ObjectShortName">W_HZ_PC_WRITE[31:0]</obj_property>
+   <wvobject fp_name="/tp4_test/W_HZ_PC_WRITE" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">W_HZ_PC_WRITE</obj_property>
+      <obj_property name="ObjectShortName">W_HZ_PC_WRITE</obj_property>
    </wvobject>
-   <wvobject fp_name="/tp4_test/W_HZ_ID_ControlMux" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">W_HZ_ID_ControlMux[31:0]</obj_property>
-      <obj_property name="ObjectShortName">W_HZ_ID_ControlMux[31:0]</obj_property>
+   <wvobject fp_name="/tp4_test/W_HZ_ID_ControlMux" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">W_HZ_ID_ControlMux</obj_property>
+      <obj_property name="ObjectShortName">W_HZ_ID_ControlMux</obj_property>
    </wvobject>
    <wvobject fp_name="/tp4_test/W_FU_ForwardA" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">W_FU_ForwardA[31:0]</obj_property>
-      <obj_property name="ObjectShortName">W_FU_ForwardA[31:0]</obj_property>
+      <obj_property name="ElementShortName">W_FU_ForwardA[1:0]</obj_property>
+      <obj_property name="ObjectShortName">W_FU_ForwardA[1:0]</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="CustomSignalColor">#ffff00</obj_property>
    </wvobject>
    <wvobject fp_name="/tp4_test/W_FU_ForwardB" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">W_FU_ForwardB[31:0]</obj_property>
-      <obj_property name="ObjectShortName">W_FU_ForwardB[31:0]</obj_property>
+      <obj_property name="ElementShortName">W_FU_ForwardB[1:0]</obj_property>
+      <obj_property name="ObjectShortName">W_FU_ForwardB[1:0]</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="CustomSignalColor">#ffff00</obj_property>
    </wvobject>
@@ -278,6 +278,7 @@
       <obj_property name="ObjectShortName">W_DM_REG_1[31:0]</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="CustomSignalColor">#00ffff</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/tp4_test/W_DM_REG_2" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">W_DM_REG_2[31:0]</obj_property>
@@ -350,6 +351,7 @@
       <obj_property name="ObjectShortName">W_RM_REG_5[31:0]</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="CustomSignalColor">#ffff00</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/tp4_test/W_RM_REG_6" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">W_RM_REG_6[31:0]</obj_property>

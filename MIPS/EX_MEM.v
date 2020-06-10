@@ -21,6 +21,7 @@
 module EX_MEM(
     input CLK,
     input RESET,
+	 input ENABLE,
 	 input [31:0] I_EXE_PC,
 	 input [31:0] I_EXE_ALU_result,
 	 input [31:0] I_EXE_SHIFT,
@@ -49,7 +50,7 @@ module EX_MEM(
 			O_EXE_SHIFT <= 0;
 			
 		end
-		else
+		else if (ENABLE)
 			begin
 					O_EXE_PC_out <= I_EXE_PC;
 					O_EXE_ALU_result <=I_EXE_ALU_result;

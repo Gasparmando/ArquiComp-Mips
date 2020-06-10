@@ -21,6 +21,7 @@
 module ID_EX(
     input CLK,
     input RESET,
+	 input ENABLE,
     input [19:0] I_IDEX_ControlReg,
     input [31:0] I_IDEX_PC,
     input [31:0] I_IDEX_read_data1,
@@ -56,7 +57,7 @@ module ID_EX(
 				O_IDEX_RD <= 0;
 				O_IDEX_SHIFT <= 0;
 			end
-		else
+		else if (ENABLE)
 			begin
 				O_IDEX_ControlReg <= I_IDEX_ControlReg;
 				O_IDEX_PC <= I_IDEX_PC;

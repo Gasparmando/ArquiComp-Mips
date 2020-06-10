@@ -23,6 +23,7 @@
 module IF_ID(
     input CLK,
     input RESET,
+	 input ENABLE,
     input [31:0] I_IFID_INSTRUCTION,
     input [31:0] I_IFID_PC,
 	 input I_IFID_WRITE,
@@ -40,18 +41,20 @@ localparam NOP = 32'b1111_1000_0000_0000_0000_0000_0000_0000;
             O_IFID_PC <= 0;
             O_IFID_INSTRUCTION <= 0;
         end
-        else
-		  if(I_IFID_FLUSH)
+        else if (ENABLE) 
 		  begin
-			   O_IFID_PC <= 0;
-            O_IFID_INSTRUCTION <= NOP;
-		  end
+				if(I_IFID_FLUSH)
+				  begin
+						O_IFID_PC <= 0;
+						O_IFID_INSTRUCTION <= NOP;
+				  end
 		  else if(I_IFID_WRITE)
             begin
 				
                O_IFID_PC <= I_IFID_PC;
                O_IFID_INSTRUCTION <= I_IFID_INSTRUCTION;
             end
+		end
     end
     
 endmodule

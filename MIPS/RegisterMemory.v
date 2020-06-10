@@ -21,6 +21,7 @@
 module RegisterMemory(
 	 input CLK,
 	 input RESET,
+	 input ENABLE,
     input [4:0] I_REGMEM_RS,
     input [4:0] I_REGMEM_RT,
     input [4:0] I_REGMEM_RD,
@@ -73,7 +74,7 @@ module RegisterMemory(
 				for(i=0;i<32;i=i+1)
 					REG[i]<=0;
 			end
-		else
+		else if (ENABLE)
 			begin
 				if(I_REGMEM_REGWR)
 					begin
